@@ -1,0 +1,11 @@
+<form class="login">
+    <h1>Inicio de Sesión</h1>
+    <input type="email" [(ngModel)]="username" placeholder=" " required>
+    <label for="name" class="form-email">Correo electrónico</label>
+    <input type="password" [(ngModel)]="password" placeholder=" " pattern=".{6,}" required>
+    <label for="password" class="form-password">Contraseña</label>
+    <div class="login-register" href="">
+        <span>¿No tienes cuenta? </span> <a (click)="Registrate()">Registrate aquí</a>
+    </div>
+    <input type="submit" class="button-login" value="Iniciar Sesión" (click)="login()"> 
+</form>

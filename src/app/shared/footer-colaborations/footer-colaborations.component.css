@@ -1,0 +1,43 @@
+footer{
+    color: #fce8e8;
+    width: 100%;
+    min-width: 1024px;
+    background-color: #464441;
+}
+
+.content-block{
+    position: relative;
+    text-align: center;
+    height: 210px;
+}
+
+.content-block h2 {
+    padding: 14px;
+    font-size: 20px;
+}
+
+.colaborator{
+    background-color: #464441;
+}
+
+.colaborator img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-left: 12px;
+}
+
+hr {
+    width: 25%;
+    margin-top: 10px;
+    margin-left: 500px;
+}
+
+.copyright{
+    height: 35px;
+    text-align: center;
+    justify-content: center;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #464441;
+}
