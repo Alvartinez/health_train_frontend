@@ -1,13 +1,23 @@
+*{
+    text-decoration: none;
+}
+
 header {
-    position: relative;
-    width: 1349px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 1024px;
     height: 60px;
-    left: 0px;
-    top: 0px;
     background: #2E95B6;
 }
 
-header .cont-logo {
+.containerLogo{
+    width: 20%;
+    height: 100%;
+}
+
+.cont-logo {
     background-color: #fce8e8;
     width: 35px;
     height: 35px;
@@ -25,7 +35,7 @@ header .cont-logo {
     width: 28px;
 }
 
-header h3 {
+.containerLogo h3 {
     position: relative;
     top: 22px;
     left: 66px;
@@ -34,30 +44,27 @@ header h3 {
     height: 28px;
     width: 100px;
     color: #f7f7f7;
+    user-select: none;
 }
 
 .cont-perfil {
-    width: 34px;
-    height: 34px;
-    position: absolute;
-    top: 13px;
-    left: 1170px;
-    border-radius: 50%;
+    display: flex;
+    width: 50%;
+    height: 100%;
+    align-items: center;
     text-align: center;
 }
 
-.nombre-usuario{
-    display: flex;
-}
 
-.nombre-usuario p {
-    position: absolute;
-    left: 38px;
-    bottom: 2px;
-    width: 350px;
+.cont-perfil h3 {
+    width: 72%;
+    margin-top: 8px;
+    margin-right: 8px;
+    font-size: 16px;
     text-align: end;
     font-weight: 500;
-    color: #fce8e8;
+    color: #ffffff;
+    user-select: none;
 }
 
 .Btn-perfil{
@@ -68,12 +75,13 @@ header h3 {
     height: 38px;
     border: none;
     border-radius: 50%;
+    margin-right: 8px;
     cursor: pointer;
     position: relative;
     overflow: hidden;
     transition-duration: .3s;
     box-shadow: 2px 2px 10px rgba(219, 219, 219, 0.473);
-    background-color: rgb(45, 180, 220);
+    background-color: #2db4dc;
 }
 
 .Btn-perfil img {
@@ -124,12 +132,10 @@ header h3 {
     border-radius: 50%;
     cursor: pointer;
     position: relative;
-    left: 40px;
-    bottom: 38px;
     overflow: hidden;
     transition-duration: .3s;
     box-shadow: 2px 2px 10px rgba(219, 219, 219, 0.473);
-    background-color: rgb(255, 65, 65);
+    background-color: #ff4141;
 }
 
 /* plus sign */

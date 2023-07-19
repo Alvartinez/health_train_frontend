@@ -1,18 +1,20 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ErrorService {
 
-    msgError( event: HttpErrorResponse ) {
-    if (event.error.msg) {
-      console.log(event.error.msg);
+  constructor(private toastr: ToastrService) { }
+
+  msgError(event: HttpErrorResponse) {
+    if (event.error.msg) { 
+      this.toastr.error(event.error.msg, "Error");
     } else {
-      alert("¡Ups! Se ocurrio un error, comuniquese con el administrador");
+      this.toastr.error("Ocurrió un error, comuníquese con el Admin", "Error");
     }
   }
 
-  constructor() { }
 }

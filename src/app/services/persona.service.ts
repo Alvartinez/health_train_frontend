@@ -13,14 +13,18 @@ export class PersonService {
 
     constructor(private http:HttpClient) { 
         this.myAppUrl = environment.endpoint;
-        this.myApiUrl = "/api/Personas";
+        this.myApiUrl = "api/personas/";
+    }
+
+    getPerson(): Observable<Person[]>{
+        return this.http.get<Person[]>(`${this.myAppUrl}${this.myApiUrl}`);
     }
 
     signIn(user: Person): Observable<any>{
-        return this.http.post(`${this.myAppUrl}${this.myApiUrl}`, user);
+        return this.http.post(`${this.myAppUrl}${this.myApiUrl}newUser`, user);
     }
 
     login(user: Person): Observable<string> {
-        return this.http.post<string>(`${this.myAppUrl}${this.myApiUrl}/login`, user);
+        return this.http.post<string>(`${this.myAppUrl}${this.myApiUrl}loginUser`, user);
     }
 }

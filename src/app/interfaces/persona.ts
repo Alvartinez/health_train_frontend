@@ -1,5 +1,6 @@
 export interface Person{
     nombre?: string,
     email: string,
-    password: string
+    password: string,
+    estado?: boolean
 }

@@ -1,10 +1,10 @@
 import { Person } from 'src/app/interfaces/persona';
-import { LoginComponent } from './../login/login.component';
 import { Component } from '@angular/core';
 import { ErrorService } from 'src/app/services/error.service';
 import { Router } from '@angular/router';
 import { PersonService } from 'src/app/services/persona.service';
 import { HttpErrorResponse } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'form-login',
@@ -13,42 +13,52 @@ import { HttpErrorResponse } from '@angular/common/http';
 })
 export class FormLoginComponent {
 
-  username: string = "";
+  email: string = "";
   password: string = "";
+  loading: boolean = false;
 
-  constructor(private loginComponent: LoginComponent, private _userService: PersonService, private router:Router, private _errorService: ErrorService) { }
-
+  constructor(private toastr: ToastrService, private _personService:PersonService, private router:Router, private _errorService: ErrorService){}
 
   login() {
      //Validación de datos
-    if (this.username == "" || this.password == "") {
-      alert("Todos los campos son obligatorios");
+    if (this.email == "" || this.password == "") {
+      this.toastr.error("Todos los campos son obligatorios", "Error");
+      return;
+    }
+
+    // Verificación del patrón del correo electrónico
+    const domainPattern = /@\w+(\.\w{2,3})+$/i; 
+    if (!domainPattern.test(this.email)) {
+      this.toastr.error("El correo electrónico debe tener un formato válido", "Error");
       return;
     }
 
     //Creación del body
-    const person: Person = {
-      email: this.username,
+    const user: Person = {
+      email: this.email,
       password: this.password
     }
 
-    this._userService.login(person).subscribe({
-      next: (token) => {
-        localStorage.setItem("token", token);
-        this.router.navigate(["/user-home"]);
-      },
+    this.loading = true;
 
+    this._personService.login(user).subscribe({
+      next: (token) => {
+        this.loading = false;
+        this.router.navigate(["/user-home"]);
+        localStorage.setItem("token", token);
+      },
       error: (e: HttpErrorResponse) => {
+        this.loading = false;
+        this.vaciarCampos();
         this._errorService.msgError(e);
       }
-    })
+    });
   }
 
-  Registrate() {
-    this.loginComponent.login = false;
-    this.loginComponent.register = true;
+  //Campos vacios
+  vaciarCampos() {
+    this.email = "";
+    this.password = "";
   }
 
-  ngOnInit(): void {
-  }
 }

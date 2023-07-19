@@ -1,3 +1,4 @@
+import { ToastrService } from 'ngx-toastr';
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -7,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private toastr: ToastrService) {
     
   }
 
@@ -17,6 +18,7 @@ export class AuthGuard implements CanActivate {
     
     const token = localStorage.getItem("token");
     if (token == undefined) {
+      this.toastr.error("Acesso Denegado", "Error");
       this.router.navigate(["/login"]);
     }
     

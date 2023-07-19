@@ -97,7 +97,7 @@ input:not(:placeholder-shown)~.reset {
     margin-bottom: 23px;
     padding: 26px;
     left: 23px;
-    width: 1280px;
+    width: 90%;
 }
 
 .contenedor-cursos h1 {
@@ -106,7 +106,6 @@ input:not(:placeholder-shown)~.reset {
     font-size: 43px;
     font-weight: 700;
     color: #1197c0;
-
 }
 
 .flip-card {
