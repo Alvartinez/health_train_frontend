@@ -1,19 +1,19 @@
 <div class="bloque-principal">
     <div class="titulo">
-        <div class="div1">
+        <div class="div1" (click)="retroceder()">
             <div class="images">
-                <img src="../../../assets/image/arrow-left-circle-svgrepo-com.svg">
+                <img src="assets/image/arrow-left-circle-svgrepo-com.svg">
             </div>
             <div class="div2">
-                <img src="../../../assets/image/arrow-left-circle-hover-svgrepo-com.svg" routerLink="/user-home">
+                <img src="assets/image/arrow-left-circle-hover-svgrepo-com.svg">
             </div>
         </div>
         <h1>Buenas Prácticas de Manufactura</h1>
-        <button class="button-course">Ingresar</button>
+        <button class="button-course" (click)="ingresar()">{{ingreso}}</button>
     </div>
     <div class="contenido-informativo">
         <div class="video-info">
-            <iframe width="500px" src="https://www.youtube.com/embed/kktStLNE41I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+            <iframe src="https://www.youtube.com/embed/kktStLNE41I" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
         </div>
         <div class="informativo">
             <h1>Acerca del curso</h1>
@@ -23,8 +23,7 @@
                     La finalidad del curso es dar a conocer a los estudiantes diferentes principios y requisitos
                     sanitarios que se encuentran establecidos en la Resolución 2674 del 2013 con el objetivo de
                     asegurar el conocimiento sobre Buenas Prácticas de Manufactura (BPM) en la industria
-                    alimentaria garantizando en los alimentos condiciones sanitarias adecuadas y además se
-                    disminuyan los posibles riesgos existentes en la fabricación, procesamiento, preparación,
+                    alimentaria garantizando en los alimentos condiciones sanitarias adecuadas y la disminución de los posibles riesgos existentes en la fabricación, procesamiento, preparación,
                     envase, almacenamiento, transporte, distribución y comercialización de alimentos y
                     materias primas de alimentos.
                 </p>
@@ -66,14 +65,15 @@
                 <li>Módulo I: Historia y evolución</li>
                 <li>Módulo II: Legislación e instituciones nacionales e internacionales</li>
                 <li>Módulo III: Edificaciones e instalaciones</li>
-                <li>Módulo IV: Equipos y utensilios</li>
                 <li>Módulo V: Personal manipulador de alimentos</li>
-                <li>Módulo VI: Requisitos de higiene y fabricación</li>
+                <li>Módulo IV: Equipos y utensilios</li>
                 <li>Módulo VII: Aseguramiento y control de calidad</li>
-                <li>Módulo VIII: Saneamiento</li>
+                <li>Módulo VI: Requisitos de higiene y fabricación</li>
                 <li>Módulo IX: Almacenamiento</li>
+                <li>Módulo VIII: Saneamiento</li>
                 <li>Módulo X: Restaurantes y establecimientos gastronómicos</li>
             </ul>
         </div>
+
     </div>
 </div>

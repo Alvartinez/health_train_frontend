@@ -1,0 +1,344 @@
+<section *ngIf="finish && !reanudar">
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>Quiz formativo</h2>
+                    <a class="cierre" (click)="cierre()">
+                        <img src="assets/image/xQuiz.png">
+                    </a>
+                </div>
+
+                <div class="container">
+                    <div class="tablero">
+                        <div class="enunciado">
+                            <p>
+                                A continuación relacione los conceptos o definiciones de la Columna A con los términos o palabras claves de la columna B
+                                según corresponda, teniendo en cuenta el contenido del módulo actual revisado:
+                            </p>
+                        </div>
+
+                        <div class="columna">
+                            <div class="columna_A">
+                                <h3>Columna A</h3>
+                                <ul>
+                                    <li>
+                                        1. {{enunciado1}}
+                                    </li>
+                        
+                                    <li>
+                                        2. {{enunciado2}}
+                                    </li>
+                        
+                                    <li>
+                                        3. {{enunciado3}}
+                                    </li>
+                        
+                                    <li>
+                                        4. {{enunciado4}}
+                                    </li>
+                        
+                                    <li>
+                                        5. {{enunciado5}}
+                                    </li>
+                        
+                                    <li>
+                                        6. {{enunciado6}}
+                                    </li>
+                        
+                                    <li>
+                                        7. {{enunciado7}}
+                                    </li>
+                        
+                                </ul>
+                            </div>
+                            <div class="columna_B">
+                                <h3>Columna B</h3>
+                                <select name="lista_respuestas" id="lista_respuesta_1" [(ngModel)]="answer1">
+                                    <option selected disabled>Selecciona</option>
+                                    <option value="INVIMA">INVIMA</option>
+                                    <option value="DECRETO 60 DEL 2002">DECRETO 60 DEL 2002</option>
+                                    <option value="CDC">CDC</option>
+                                    <option value="OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD">OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD</option>
+                                    <option value="RESOLUCIÓN 2184 DEL 2019">RESOLUCIÓN 2184 DEL 2019</option>
+                                    <option value="RESOLUCIÓN 2115 DEL 2007">RESOLUCIÓN 2115 DEL 2007</option>
+                                    <option value="RESOLUCIÓN 683 DEL 2012">RESOLUCIÓN 683 DEL 2012</option>
+                                </select>
+                        
+                                <select name="lista_respuestas" id="lista_respuesta_2" [(ngModel)]="answer2">
+                                    <option selected disabled>Selecciona</option>
+                                    <option value="INVIMA">INVIMA</option>
+                                    <option value="DECRETO 60 DEL 2002">DECRETO 60 DEL 2002</option>
+                                    <option value="CDC">CDC</option>
+                                    <option value="OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD">OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD</option>
+                                    <option value="RESOLUCIÓN 2184 DEL 2019">RESOLUCIÓN 2184 DEL 2019</option>
+                                    <option value="RESOLUCIÓN 2115 DEL 2007">RESOLUCIÓN 2115 DEL 2007</option>
+                                    <option value="RESOLUCIÓN 683 DEL 2012">RESOLUCIÓN 683 DEL 2012</option>
+                                </select>
+                        
+                                <select name="lista_respuestas" id="lista_respuesta_3" [(ngModel)]="answer3">
+                                    <option selected disabled>Selecciona</option>
+                                    <option value="INVIMA">INVIMA</option>
+                                    <option value="DECRETO 60 DEL 2002">DECRETO 60 DEL 2002</option>
+                                    <option value="CDC">CDC</option>
+                                    <option value="OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD">OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD</option>
+                                    <option value="RESOLUCIÓN 2184 DEL 2019">RESOLUCIÓN 2184 DEL 2019</option>
+                                    <option value="RESOLUCIÓN 2115 DEL 2007">RESOLUCIÓN 2115 DEL 2007</option>
+                                    <option value="RESOLUCIÓN 683 DEL 2012">RESOLUCIÓN 683 DEL 2012</option>
+                                </select>
+                        
+                                <select name="lista_respuestas" id="lista_respuesta_4" [(ngModel)]="answer4">
+                                    <option selected disabled>Selecciona</option>
+                                    <option value="INVIMA">INVIMA</option>
+                                    <option value="DECRETO 60 DEL 2002">DECRETO 60 DEL 2002</option>
+                                    <option value="CDC">CDC</option>
+                                    <option value="OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD">OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD</option>
+                                    <option value="RESOLUCIÓN 2184 DEL 2019">RESOLUCIÓN 2184 DEL 2019</option>
+                                    <option value="RESOLUCIÓN 2115 DEL 2007">RESOLUCIÓN 2115 DEL 2007</option>
+                                    <option value="RESOLUCIÓN 683 DEL 2012">RESOLUCIÓN 683 DEL 2012</option>
+                                </select>
+                        
+                                <select name="lista_respuestas" id="lista_respuesta_5" [(ngModel)]="answer5">
+                                    <option selected disabled>Selecciona</option>
+                                    <option value="INVIMA">INVIMA</option>
+                                    <option value="DECRETO 60 DEL 2002">DECRETO 60 DEL 2002</option>
+                                    <option value="CDC">CDC</option>
+                                    <option value="OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD">OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD</option>
+                                    <option value="RESOLUCIÓN 2184 DEL 2019">RESOLUCIÓN 2184 DEL 2019</option>
+                                    <option value="RESOLUCIÓN 2115 DEL 2007">RESOLUCIÓN 2115 DEL 2007</option>
+                                    <option value="RESOLUCIÓN 683 DEL 2012">RESOLUCIÓN 683 DEL 2012</option>
+                                </select>
+                        
+                                <select name="lista_respuestas" id="lista_respuesta_6" [(ngModel)]="answer6">
+                                    <option selected disabled>Selecciona</option>
+                                    <option value="INVIMA">INVIMA</option>
+                                    <option value="DECRETO 60 DEL 2002">DECRETO 60 DEL 2002</option>
+                                    <option value="CDC">CDC</option>
+                                    <option value="OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD">OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD</option>
+                                    <option value="RESOLUCIÓN 2184 DEL 2019">RESOLUCIÓN 2184 DEL 2019</option>
+                                    <option value="RESOLUCIÓN 2115 DEL 2007">RESOLUCIÓN 2115 DEL 2007</option>
+                                    <option value="RESOLUCIÓN 683 DEL 2012">RESOLUCIÓN 683 DEL 2012</option>
+                                </select>
+                        
+                                <select name="lista_respuestas" id="lista_respuesta_7" [(ngModel)]="answer7">
+                                    <option selected disabled>Selecciona</option>
+                                    <option value="INVIMA">INVIMA</option>
+                                    <option value="DECRETO 60 DEL 2002">DECRETO 60 DEL 2002</option>
+                                    <option value="CDC">CDC</option>
+                                    <option value="OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD">OMS/ ORGANIZACIÓN MUNDIAL DE LA SALUD</option>
+                                    <option value="RESOLUCIÓN 2184 DEL 2019">RESOLUCIÓN 2184 DEL 2019</option>
+                                    <option value="RESOLUCIÓN 2115 DEL 2007">RESOLUCIÓN 2115 DEL 2007</option>
+                                    <option value="RESOLUCIÓN 683 DEL 2012">RESOLUCIÓN 683 DEL 2012</option>
+                                </select>
+                        
+                            </div>
+                </div>
+
+                    </div>
+
+                    <a class="button__finish" (click)="culminar()">
+                        Culminar
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="!finish && !reanudar">
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>Resultados</h2>
+                </div>
+
+                <div class="container">
+                    <div class="tableroA">
+                        <div class="titles">
+                            <h4 id="enun">Enunciado</h4>
+                            <h4 id="resp">Respuesta aprendiz</h4>
+                            <h4 id="resul"> Resultado</h4>
+                        </div>
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    1. Es la autoridad directiva y coordinadora de la acción sanitaria en el sistema de las Naciones Unidas.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer1}}
+                                </p>
+                            </div>
+
+                            <div [ngStyle]="isCorrect1 ? correct_answer : wrong_answer" class="resultado"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    2. Resolución por medio de la cual se señalan características, instrumentos básicos y frecuencias del
+                                    sistema de control
+                                    y vigilancia para la calidad del agua para consumo humano.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer2}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect2 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    3. Agencia Regulatoria Nacional, una entidad de vigilancia y control de carácter técnico científico, que
+                                    trabaja para la
+                                    protección de la salud individual y colectiva de los colombianos, mediante la aplicación de las normas
+                                    sanitarias
+                                    asociadas al consumo y uso de alimentos, medicamentos, dispositivos médicos y otros productos objeto de
+                                    vigilancia
+                                    sanitaria.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer3}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect3 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    4. Por la cual se modifica la Resolución 668 de 2016 sobre uso racional de bolsas plásticas y se adoptan
+                                    otras
+                                    disposiciones. (Código de colores)
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer4}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect4 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    5. Decreto por el cual se promueve la aplicación del sistema de análisis de peligros y puntos críticos,
+                                    - HACCP en
+                                    la
+                                    fábrica de alimentos, y se reglamenta el proceso de certificación.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer5}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect5 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    6. Establece el Reglamento Técnico, mediante el cual se señalan los requisitos sanitarios que deben
+                                    cumplir los
+                                    materiales, objetos, envases y equipamientos destinados a entrar en contacto con alimentos y bebidas
+                                    para consumo
+                                    humano, con el fin de proteger la salud humana y prevenir las prácticas que puedan inducir a error a los
+                                    consumidores.
+                                </p>
+                        
+                            </div>
+                        
+                            <div class="respuesta">
+                                <p>
+                                    {{answer6}}
+                                </p>
+                            </div>
+                        
+                            <div class="resultado" [ngStyle]="isCorrect6 ? correct_answer : wrong_answer"></div>
+                        
+                        </div>
+                        
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    7. Agencia del Gobierno federal de los Estados Unidos cuya misión es proteger la salud pública mediante
+                                    la
+                                    prevención y
+                                    el control de enfermedades, lesiones y discapacidades.
+                                </p>
+                        
+                            </div>
+                        
+                            <div class="respuesta">
+                                <p>
+                                    {{answer7}}
+                                </p>
+                            </div>
+                        
+                            <div class="resultado" [ngStyle]="isCorrect7 ? correct_answer : wrong_answer"></div>
+                        
+                        </div>
+
+                    </div>
+
+                    <a class="button__finish" (click)="culminado()">
+                        Retroalimentación
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="reanudar">
+    <div class="background">
+    </div>
+    <div class="optionQuiz">
+        <div class="background-img">
+            <img src="assets/image/pinguino_repeat.png" alt="">
+        </div>
+        <div class="content">
+            <h2>REPETIR QUIZ</h2>
+            <p>Ya has realizado anteriormente el quiz.</p>
+            <span>¿Deseas realizarlo nuevamente?</span>
+            <ul class="chips">
+                <li class="chip-yes" (click)="aceptar()">
+                    Aceptar
+                </li>
+                <li class="chip-no" (click)="cancelar()">
+                    Cancelar
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

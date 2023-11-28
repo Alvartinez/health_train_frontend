@@ -1,0 +1,125 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <a class="cierre" (click)="cierre()">
+                <img src="../../../../assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="content">
+                    <div class="list-topics">
+                        <h3>CONDICIONES ESPECÍFICAS DE LAS ÁREAS DE ELABORACIÓN</h3>
+
+                        <nav>
+                            <ol>
+
+                                <li (click)="piso()">Pisos y drenajes</li>
+                                <li (click)="pared()">Paredes</li>
+                                <li (click)="techo()">Techos</li>
+                                <li (click)="ventana()">Ventanas y otras aberturas</li>
+                                <li (click)="puerta()">Puertas</li>
+                                <li (click)="escalera()">Escaleras</li>
+                                <li (click)="iluminacion()">Iluminación</li>
+                                <li (click)="ventilacion()">Ventilación</li>
+
+                            </ol>
+                        </nav>
+
+                    </div>
+
+                    <div class="board">
+                        <div class="board-content">
+
+                            <div *ngIf="areas.pisos">
+                                <h4>Pisos y drenajes</h4>
+                                <p>
+                                    La cual establece las normas sanitarias para la prevención y control de los agentes
+                                    biológicos, físicos o
+                                    químicos que
+                                    alteran las características del ambiente exterior de las edificaciones hasta hacerlo
+                                    peligroso para la salud
+                                    humana.
+                                </p>
+                            </div>
+
+                            <div *ngIf="areas.paredes">
+                                <h4>Paredes</h4>
+                                <p>
+                                    En las áreas de elaboración y envasado, las paredes deben ser de materiales resistentes, colores claros, impermeables,
+                                    no absorbentes y de fácil limpieza y desinfección.
+                                    <br>
+                                    Las uniones entre las paredes y entre estas y los pisos, deben estar selladas y tener forma redondeada para impedir la
+                                    acumulación de suciedad y facilitar la limpieza y desinfección.
+
+                                </p>
+                            </div>
+
+                            <div *ngIf="areas.techos">
+                                <h4>Techos</h4>
+                                <p>
+                                    Deben estar diseñados y construidos de manera que se evite la acumulación de suciedad, la condensación, la formación de
+                                    hongos y levaduras, el desprendimiento superficial y además facilitar la limpieza y el mantenimiento.
+                                </p>
+                            </div>
+
+                            <div *ngIf="areas.ventanas">
+                                <h4>Ventanas y otras aberturas</h4>
+                                <p>
+                                    Deben construirse de manera tal que se evite la entrada y acumulación de polvo, suciedades, al igual que el ingreso de
+                                    plagas y facilitar la limpieza y desinfección.
+                                    <br>
+                                    Estar provistas con malla anti-insecto de fácil limpieza y buena conservación que sean resistentes a la limpieza y la
+                                    manipulación. Los vidrios de las ventanas ubicadas en áreas de proceso deben tener protección para evitar contaminación
+                                    en caso de ruptura.
+                                </p>
+                            </div>
+
+                            <div *ngIf="areas.puertas">
+                                <h4>Puertas</h4>
+                                <p>
+                                    Las puertas deben tener superficie lisa, no absorbente, deben ser resistentes y de suficiente amplitud; donde se
+                                    precise, tendrán dispositivos de cierre automático y ajuste hermético.
+                                </p>
+                            </div>
+
+                            <div *ngIf="areas.escaleras">
+                                <h4>
+                                    Escaleras y otros
+                                </h4>
+                                <p>
+                                    Estas deben ubicarse y construirse de manera que no causen contaminación al alimento o dificulten el flujo regular del
+                                    proceso y la limpieza de la planta.
+                                </p>
+                            </div>
+
+                            <div *ngIf="areas.iluminaciones">
+                                <h4>Iluminación</h4>
+                                <p>
+                                    La iluminación debe ser de la calidad e intensidad adecuada para la ejecución higiénica y efectiva de todas las
+                                    actividades.
+                                    <br>
+                                    Las lámparas, accesorios y otros medios de iluminación del establecimiento deben ser del tipo de seguridad y estar
+                                    protegidos para evitar la contaminación en caso de ruptura y, en general, contar con una iluminación uniforme que no
+                                    altere los colores naturales.
+                                </p>
+                            </div>
+
+                            <div *ngIf="areas.ventilaciones">
+                                <h4>Ventilación</h4>
+                                <p>
+                                    Las áreas de elaboración poseerán sistemas de ventilación directa o indirecta, los cuales no deben crear condiciones que
+                                    contribuyan a la contaminación de estas o a la inco-modidad del personal.
+                                    La ventilación debe ser adecuada para prevenir la condensación del vapor, polvo y facilitar la remoción del calor.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a class="retrocede" (click)="button_back()">Anterior</a>
+                        <a class="siguiente" (click)="button_next()">Siguiente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,218 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <a class="cierre" (click)="cierre()">
+                <img src="../../../../assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="content">
+                    <div class="list-topics">
+                        <h3>CARACTERÍSTICAS GENERALES Y ESPECIFICAS DEL PERSONAL MANIPULADOR</h3>
+
+                        <nav>
+                            <ol>
+
+                                <li (click)="estado()">Estado de salud</li>
+                                <li (click)="educacion()">Educación y capacitación</li>
+                                <li (click)="capacitacion()">Plan de capacitación</li>
+                                <li (click)="practica()">Prácticas higiénicas y medidas de protección</li>
+
+                            </ol>
+                        </nav>
+
+                    </div>
+
+                    <div class="board">
+                        <div class="board-content">
+
+                            <div *ngIf="personal.estado">
+                                <h4>
+                                    Estado de salud
+                                </h4>
+                                <p>
+                                    El personal manipulador de alimentos debe cumplir con los siguientes requisitos:
+                                    
+                                    <li>
+                                        Contar con una certificación médica en la cual conste la aptitud o no para la mani-pulación de alimentos.
+                                    </li>
+
+                                    <li>
+                                        Debe efectuarse un reconocimiento médico cada vez que se considere necesario por razones clínicas y epidemiológicas,
+                                        especialmente después de una ausencia del trabajo motivada por una infección que pudiera dejar secuelas capaces de
+                                        provocar contaminación de los alimentos que se manipulen.
+                                    </li>
+
+                                    <li>
+                                        En todos los casos, como resultado de la valoración médica se debe expedir un certificado en el cual conste la
+                                        aptitud o no para la manipulación de alimentos.
+                                    </li>
+                                        La empresa debe garantizar el cumplimiento y seguimiento a los tratamientos ordenados por el médico. Una vez
+                                        finalizado el tratamiento, el médico debe expedir un certificado en el cual conste la aptitud o no para la manipulación
+                                        de alimentos.
+                                    <li>
+                                        La empresa es responsable de tomar las medidas necesarias para que no se permita contaminar los alimentos directa o
+                                        indirectamente por una persona que se sepa o sospeche que padezca de una enfermedad susceptible de transmitirse por los
+                                        alimentos, o que sea portadora de una enfermedad semejante, o que presente heridas infectadas, irritaciones cutáneas
+                                        infectadas o diarrea.
+                                    </li>
+
+                                    <li>
+                                        Todo manipulador de alimentos que represente un riesgo de este tipo debe comunicarlo a la empresa.
+                                    </li>
+
+                                </p>
+
+                            </div>
+
+                            <div *ngIf="personal.educacion">
+                                <h4>
+                                    Educación y capacitación
+                                </h4>
+                                <p>
+                                    <li>
+                                        Todas las personas que realizan actividades de manipulación de alimentos deben tener formación en educación
+                                        sanitaria, principios básicos de Buenas Prácticas de Manufactura y prácticas higiénicas en manipulación de alimentos.
+                                    </li>
+
+                                    <li>
+                                        Las empresas deben tener un plan de capacitación continuo y permanente para el personal manipulador de alimentos
+                                        desde el momento de su contratación y luego ser reforzado mediante charlas, cursos u otros medios efectivos de
+                                        actualización. Dicho plan debe ser de por lo menos 10 horas anuales, sobre asuntos específicos de que trata la
+                                        resolución 2674 de 2013.
+                                    </li>
+
+                                </p>
+
+                            </div>
+
+                            <div *ngIf="personal.capacitacion">
+                                <h4>
+                                    Plan de capacitación
+                                </h4>
+                                <p>
+
+                                    <li>
+                                        El plan de capacitación debe contener: Metodología, duración, docentes, cronograma y temas específicos a impartir.
+                                    </li>
+
+                                    <li>
+                                        El enfoque, contenido y alcance de la capacitación impartida debe ser acorde con la empresa, el proceso tecnológico
+                                        y tipo de establecimiento de que se trate.
+                                    </li>
+
+                                    <li>
+                                        Para reforzar el cumplimiento de las prácticas higiénicas, se colocarán en sitios estratégicos avisos alusivos a la
+                                        obligatoriedad y necesidad de su observancia durante la manipulación de alimentos.
+                                    </li>
+
+                                    <li>
+                                        El manipulador de alimentos debe ser entrenado para comprender y manejar el control de los puntos del proceso que
+                                        están bajo su responsabilidad y la importancia de su vigilancia o monitoreo; además, debe conocer los límites del punto
+                                        del proceso y las acciones correctivas a tomar cuando existan desviaciones en dichos límites.
+                                    </li>
+
+                                </p>
+
+                            </div>
+
+                            <!--Contenido RESOLUCIÓN 5109 DEL 2005-->
+                            <div *ngIf="personal.practica">
+                                <h4>
+                                    Prácticas higiénicas y medidas de protección
+                                </h4>
+                                <p>
+                                    Todo manipulador de alimentos debe adoptar las prácticas higiénicas y medidas de protección que a continuación se
+                                    establecen:
+
+                                    <li>
+                                        Mantener una estricta limpieza e higiene personal y aplicar buenas prácticas higiénicas en sus labores, de manera
+                                        que se
+                                        evite la contaminación del alimento y de las superficies de contacto con este.
+                                    </li>
+                                    
+                                    <li>
+                                        Usar vestimenta de trabajo que cumpla los siguientes requisitos: De color claro que permita visualizar fácilmente su
+                                        limpieza; con cierres o cremalleras y/o broches en lugar de botones u otros accesorios que puedan caer en el
+                                        alimento;
+                                        sin bolsillos ubicados por encima de la cintura; cuando se utiliza delantal, este debe permanecer atado al cuerpo en
+                                        forma segura para evitar la contaminación del alimento y accidentes de trabajo.
+                                    </li>
+                                    
+                                    <li>
+                                        El manipulador de alimentos no podrá salir e ingresar al establecimiento con la vestimenta de trabajo.
+                                    </li>
+                                    
+                                    <li>
+                                        Lavarse las manos con agua y jabón desinfectante, antes de comenzar su trabajo, cada vez que salga y regrese al área
+                                        asignada y después de manipular cualquier material u objeto que pudiese representar un riesgo de contaminación para
+                                        el
+                                        alimento. Será obliga¬torio realizar la desinfección de las manos cuando los riesgos asociados con la etapa del
+                                        proceso
+                                        así lo justifiquen.
+                                    </li>
+                                    
+                                    <li>
+                                        Mantener el cabello recogido y cubierto totalmente mediante malla, gorro u otro medio efectivo y en caso de llevar
+                                        barba, bigote o patillas se debe usar cubiertas para estas. No se permite el uso de maquillaje.
+                                    </li>
+                                    
+                                    <li>
+                                        Dependiendo del riesgo de contaminación asociado con el proceso o preparación, será obligatorio el uso de tapabocas
+                                        desechables cubriendo nariz y boca mientras se manipula el alimento.
+                                    </li>
+                                    
+                                    <li>
+                                        Mantener las uñas cortas, limpias y sin esmalte.
+                                    </li>
+                                    
+                                    <li>
+                                        No se permite utilizar reloj, anillos, aretes, joyas u otros accesorios mientras el personal realice sus labores. En
+                                        caso de usar lentes, deben asegurarse a la cabeza mediante bandas, cadenas u otros medios ajustables.
+                                    </li>
+                                    
+                                    <li>
+                                        Usar calzado cerrado, de material resistente e impermeable y de tacón bajo.
+                                    </li>
+                                    
+                                    <li>
+                                        De ser necesario el uso de guantes, estos deben mantenerse limpios, sin roturas o desperfectos y ser tratados con el
+                                        mismo cuidado higiénico de las manos sin protección.
+                                    </li>
+                                    
+                                    <li>
+                                        No está permitido comer, beber o masticar cualquier objeto o producto, como tampoco fumar o escupir en las áreas
+                                        donde
+                                        se manipulen alimentos.
+                                    </li>
+                                    
+                                    <li>
+                                        El personal que presente afecciones de la piel o enfermedad infectocontagiosa debe ser excluido de toda actividad
+                                        directa de manipulación de alimentos.
+                                    </li>
+                                    
+                                    <li>
+                                        Los manipuladores no deben sentarse, acostarse, inclinarse o similares en el pasto, andenes o lugares donde la ropa
+                                        de
+                                        trabajo pueda contaminarse.
+                                    </li>
+                                    
+                                    <li>
+                                        Los visitantes a los establecimientos o plantas deben cumplir estrictamente todas las prácticas de higiene
+                                        establecidas
+                                        y portar la vestimenta y dotación adecuada, la cual debe ser suministrada por la empresa.
+                                    </li>
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a class="retrocede" (click)="button_back()">Anterior</a>
+                        <a class="siguiente" (click)="button_next()">Siguiente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

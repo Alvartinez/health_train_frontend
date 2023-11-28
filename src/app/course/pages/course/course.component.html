@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Train</title>
+</head>
+<body>
+    
+    <section>
+        <user-navbar></user-navbar>
+        <course-base></course-base>
+        <div class="contenedor-modulo">
+            <h2>Módulos</h2>
+            <div class="cartas">
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo1.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[0].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                A continuación, se presentan cada uno de los acontecimientos o descubrimientos más importantes que se han presentado en
+                                microbiología relacionada con la industria alimentaria a lo largo de los años.
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[0].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo2.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[1].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                En el siguiente modulo se encuentran cada una de las resoluciones, decretos e instituciones nacionales / internacionales
+                                de mayor interés que abarcan información referente a las buenas practicas...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[1].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo3.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[2].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                En Colombia, es de vital importancia garantizar la inocuidad de los alimentos, y por ende los establecimientos que son
+                                destinados a la fabricación, procesamiento, preparación, envase...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[2].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo4.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[3].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                En el siguiente modulo se conocerán aspectos importantes para contribuir con calidad e inocuidad, con esto, se debe
+                                contar los equipos y utensilios utilizados en el procesamiento, fabricación...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[3].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo5.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[4].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                Desde la casa, una cafetería, restaurante hasta cualquier tipo de empresa que procese alimentos, requiere de la
+                                intervención de un actor y a su vez protagonista, como lo es el manipulador de...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[4].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo6.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[5].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                En la industria alimentaria, también se tiene en cuenta el inicio de las operaciones, que parte desde todas las materias
+                                primas e insumos para la fabricación, así como las actividades de...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[5].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo7.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[6].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                En esta sección, aprenderás que todas las operaciones de fabricación, procesamiento, envase, embalado, almacenamiento,
+                                distribución, comercialización y expendio de los alimentos deben estar...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[6].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo8.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[7].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                En este módulo, hallarás la importancia del Plan de saneamiento, para obtener alimentos seguros y de calidad. Además de
+                                reconocer que toda persona natural o jurídica propietaria de un...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[7].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo9.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[8].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                En este módulo aprenderás a evitar aspectos en la cadena alimentaria: operaciones y condiciones clave, Condiciones de
+                                transporte de alimentos y materias primas, Prohibiciones en la industria...
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[8].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--Carta-->
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="container-img">
+                                <img src="../../../../assets/image/modulo10.png" alt="">
+                            </div>
+                            <div class="container-title">
+                                <h2>Modulo {{courses[9].modulo}}</h2>
+                            </div>
+                        </div>
+                        <div class="flip-card-back">
+                            <span class="description">Descripción</span>
+                            <p class="description-text">
+                                Apreciado aprendiz, has llegado al último módulo de la cartilla, en donde aprenderás sobre los restaurantes, como
+                                establecimientos de preparación y venta de alimentos listos para el consumo.
+                            </p>
+                            <button class="course-button" (click)="infoModulo(courses[9].modulo)">
+                                Ver más
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--Fin Carta-->
+
+                <!--
+                <card-module *ngFor="let course of courses | paginate: { itemsPerPage: 5, currentPage: page }" [modulo]="course.modulo" [title]="course.title" [description]="truncate(course.description, 160)" [urlRouter]="course.url"></card-module>
+                -->
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+<!--
+<pagination-controls (pageChange)="page = $event" previousLabel="Anterior" nextLabel="Siguiente"></pagination-controls>
+-->

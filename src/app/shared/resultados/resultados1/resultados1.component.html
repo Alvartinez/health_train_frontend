@@ -1,0 +1,122 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>Resultados</h2>
+                </div>
+
+                <div class="container">
+                    <div class="tablero">
+                    <div class="titles">
+                        <h4 id="enun">Enunciado</h4>
+                        <h4 id="resp">Respuesta aprendiz</h4>
+                        <h4 id="resul"> Resultado</h4>
+                    </div>    
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    1. ¿Cuál fue el Periodo en el cual se descubrió el fuego?
+                                </p>
+                        
+                            </div>
+                        
+                            <div class="respuesta">
+                                <p>
+                                    Periodo Paleolítico
+                                </p>
+                            </div>
+                        
+                            <div [ngStyle]="isCorrect1 ? correct_answer : wrong_answer" class="resultado"></div>
+                        
+                        </div>
+                        
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    2. ¿Cuál Personaje desarrolló métodos para conservar los alimentos en botellas de vidrio selladas por medio
+                                    de
+                                    calentamiento en agua hirviendo?
+                                </p>
+                        
+                            </div>
+                        
+                            <div class="respuesta">
+                                <p>
+                                    Francois Nicolas Appert
+                                </p>
+                            </div>
+                        
+                            <div class="resultado" [ngStyle]="isCorrect1 ? correct_answer : wrong_answer"></div>
+                        
+                        </div>
+                        
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    3. ¿En qué año se construyó el microscopio primitivo?
+                                </p>
+                        
+                            </div>
+                        
+                            <div class="respuesta">
+                                <p>
+                                    1674
+                                </p>
+                            </div>
+                        
+                            <div class="resultado" [ngStyle]="isCorrect1 ? correct_answer : wrong_answer"></div>
+                        
+                        </div>
+                        
+                        <div
+                            class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    4. ¿Qué Personaje abogó en 1856 por el uso del cloro en el suministro del agua, para evitar contaminación de
+                                    esta
+                                    evitando el desarrollo de enfermedades como la fiebre tifoidea en humanos?
+                                </p>
+                        
+                            </div>
+                        
+                            <div class="respuesta">
+                                <p>
+                                    William Budd
+                                </p>
+                            </div>
+                        
+                            <div class="resultado" [ngStyle]="isCorrect1 ? correct_answer : wrong_answer"></div>
+                        
+                        </div>
+                        
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    5. ¿Qué tipo de microorganismos, descubrió Louis Pasteur como causantes del proceso de fermentación de
+                                    ciertos ácidos y
+                                    sustancias indeseables (que agriaban el vino o la cerveza)?
+                                </p>
+                        
+                            </div>
+                        
+                            <div class="respuesta">
+                                <p>
+                                    Bacterias
+                                </p>
+                            </div>
+                        
+                            <div class="resultado" [ngStyle]="isCorrect1 ? correct_answer : wrong_answer"></div>
+                        
+                        </div>
+                    </div>
+                    
+                    <a class="button__finish" routerLink="/retroalimencion">
+                        Retroalimentación
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

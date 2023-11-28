@@ -1,0 +1,155 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #BCEBB2;
+}
+
+.cartas{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 90%;
+    height: auto;
+}
+
+.flip-card {
+    position: relative;
+    background-color: transparent;
+    width: 290px;
+    height: 254px;
+    perspective: 1000px;
+    font-family: sans-serif;
+    left: 5px;
+}
+
+.title {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-align: center;
+    background-color: #fce8e8;
+    opacity: .8;
+    margin: 0;
+}
+
+.description {
+    position: relative;
+    font-size: 1.4em;
+    font-weight: 900;
+    text-align: center;
+    bottom: 10px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    user-select: none;
+    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid rgb(247, 238, 235);
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    background-color: #fce8e8;
+    width: 100%;
+    color: rgb(43, 21, 21);
+    box-shadow:  1px 1px 25px rgba(36, 33, 33, 0.61);
+}
+
+.flip-card-front .container-img{
+    margin-top: 10px;
+    width: 80%;
+    height: 70%;
+}
+
+.flip-card-front .container-img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: fill;
+}
+
+.container-title{
+    margin-top: 10px;
+    width: 100%;
+}
+
+.container-title h2{
+    font-size: 20px;
+    font-weight: 700;
+    color: #2E95B6;
+}
+
+.flip-card-back {
+    background: linear-gradient(120deg, rgb(145, 242, 255) 30%, rgb(80, 205, 255) 88%,
+            rgb(196, 255, 226) 40%, rgb(160, 255, 226) 78%);
+    color: rgb(16, 20, 59);
+    transform: rotateY(180deg);
+    align-items: center;
+    overflow: hidden;
+}
+
+.description-text {
+    position: relative;
+    font-size: 13px;
+    width: 230px;
+}
+
+.course-button {
+    position: relative;
+    top: 13px;
+    background-color: #00BFA6;
+    padding: 6px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 2px dashed #00BFA6;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    transition: .4s;
+}
+
+.course-button span:last-child {
+    display: none;
+}
+
+.course-button:hover {
+    transition: .4s;
+    border: 2px dashed #00BFA6;
+    background-color: #fff;
+    color: #00BFA6;
+}
+
+.course-button:active {
+    background-color: #87dbd0;
+}

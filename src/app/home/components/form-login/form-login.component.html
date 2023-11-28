@@ -1,0 +1,25 @@
+<form class="login">
+    <div class="loginContainer" *ngIf="!loading">
+        <h1>Inicio de Sesión</h1>
+        <input type="text" list="username" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder=" " required>
+        <label for="name" class="form-username">Username</label>
+        <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder=" " pattern=".{6,}" required>
+        <label for="password" class="form-password">Contraseña</label>
+        <div class="login-register" href="">
+            <span>¿No tienes cuenta? </span> <a (click)="register()">Registrate aquí</a>
+        </div>
+        <input type="submit" class="button-login" value="Iniciar Sesión" (click)="login()"> 
+    </div>
+
+    <!--Borrar al finalizar el software-->
+    <!-- <datalist id="username"> -->
+        <!--Admin-->
+        <!-- <option value="admin123"></option> -->
+        <!--Docente-->
+        <!-- <option value="faboho03"></option> -->
+        <!--Aprendiz-->
+        <!-- <option value="andresgil_02"></option> -->
+    <!-- </datalist> -->
+
+    <app-loading *ngIf="loading"></app-loading>
+</form>

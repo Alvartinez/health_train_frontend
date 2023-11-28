@@ -1,0 +1,84 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <a class="cierre" (click)="navegarAtras()">
+                <img src="assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>{{courses[0].title}}</h2>
+                </div>
+
+                <div class="container">
+                    <div class="tab">
+                        <input type="radio" name="acc" id="acc1">
+                        <label for="acc1">
+                            <h3>Descripción</h3>
+                        </label>
+                        <div class="content">
+                            <p>
+                                {{courses[0].description}}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <input type="radio" name="acc" id="acc2">
+                        <label for="acc2">
+                            <h3>Objetivo de aprendizaje</h3>
+                        </label>
+                        <div class="content">
+                            <p>
+                                {{courses[0].objetivo}}
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <input type="radio" name="acc" id="acc3">
+                        <label for="acc3">
+                            <h3>Competencias asociadas</h3>
+                        </label>
+                        <div class="content">
+                            <p>
+                                <li *ngFor="let competencia of courses[0].competencias">
+                                    {{ competencia }}
+                                </li>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <input type="radio" name="acc" id="acc4">
+                        <label for="acc4">
+                            <h3>Duración</h3>
+                        </label>
+                        <div class="content">
+                            <p>
+                                {{courses[0].duracion}} hora(s)
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="tab">
+                        <input type="radio" name="acc" id="acc5">
+                        <label for="acc5">
+                            <h3>Temas y subtemas</h3>
+                        </label>
+                        <div class="content">
+                            <p>
+                                <li style="list-style: none;" *ngFor="let temas of courses[0].temas">
+                                    {{ temas }}
+                                </li>
+                            </p>
+                        </div>
+                    </div>
+
+                    <button class="button-course" (click)="modulo()">Iniciar módulo</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>

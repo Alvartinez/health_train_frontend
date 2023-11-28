@@ -1,0 +1,152 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <a class="cierre" (click)="cierre()">
+                <img src="../../../../assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="content">
+                    <div class="list-topics">
+                        <h3 (click)="inicio()">
+                            PLAN DE SANEAMIENTO
+                        </h3>
+
+                        <nav>
+                            <ol>
+
+                                <li (click)="limpiezas()">Limpieza y desinfección</li>
+                                <li (click)="desechos()">Desechos sólidos</li>
+                                <li (click)="plagas()">Control de plagas</li>
+                                <li (click)="potable()">Abastecimiento y suministro de agua potable</li>
+
+                            </ol>
+                        </nav>
+
+                    </div>
+
+                    <div class="board">
+                        <div class="board-content">
+
+                            <div *ngIf="plan_Saneamiento.inicio">
+                                <h4>Plan de saneamiento</h4>
+                                <p>
+                                    Un plan de saneamiento debe estar escrito y a disposición de la autoridad sanitaria competente. Podrás comprender algo
+                                    más con ayuda del siguiente video:
+
+                                    <a href="https://youtu.be/QX93uVplZeY" target="_blank" class="consulta">
+                                        Plan de Saneamiento - Resolución 2674 de 2013
+                                    </a>
+                                    <br>
+                                    Ahora sí, el plan de saneamiento debe incluir como mínimo los procedimientos, cronogramas, registros, listas de chequeo
+                                    y responsables de los siguientes programas:
+                                    <br>
+                                    <li>
+                                        Limpieza y desinfección
+                                    </li>
+
+                                    <li>
+                                        Desechos sólidos
+                                    </li>
+
+                                    <li>
+                                        Control de plagas
+                                    </li>
+
+                                    <li>
+                                        Abastecimiento y suministro de agua potable
+                                    </li>
+
+                                </p>
+                            
+                            </div>
+
+                            <div *ngIf="plan_Saneamiento.limpieza">
+                                <h4>Limpieza y desinfección</h4>
+                                <p>
+                                    Los procedimientos de limpieza y desinfección deben satisfacer las necesidades particulares del proceso y del producto
+                                    de que se trate. Cada establecimiento, es decir cada empresa, o restaurante, debe tener por escrito todos los
+                                    procedimientos, y estar al tanto del correcto uso de los agentes y sustancias utilizadas, así como las concentraciones o
+                                    formas de uso, tiempos de contacto y los equipos e implementos requeridos para efectuar las operaciones y periodicidad
+                                    de limpieza y desinfección. Es importante recalcar que se debe limpiar y desinfectar, y no solo limpiar, o solo
+                                    desinfectar.
+                                    <br><br>
+                                    Limpiar regularmente las superficies es importante, porque ayuda a prevenir la propagación de microorganismos que pueden
+                                    causar enfermedades, como los norovirus, bacterias como <i>Shigella</i> y parásitos como <i>Giardia</i>. Limpiar las superficies de su
+                                    casa elimina los microbios, la suciedad y otras impurezas, y lo ayuda a usted y a su familia a mantenerse sanos.
+                                    Probablemente, no sea necesario higienizar o desinfectar para reducir la propagación de enfermedades en la casa, a menos
+                                    que haya personas enfermas en ella.
+                                    <br><br>
+                                    Las frutas y verduras son importantes y para su consumo, hay que tener en cuenta que muchas de las frutas, hortalizas y
+                                    vegetales se comen crudas por lo que se hace énfasis en someterlas a un buen lavado y desinfección antes de consumirlas.
+                                    Se debe recordar que son alimentos que vienen del campo, y muchos de ellos han tenido contacto directo con la tierra,
+                                    abonos, son regados con aguas contaminadas y expuestos a pesticidas y agroquímicos; además, luego de su cosecha son
+                                    altamente manipulados durante las etapas de transporte y distribución, por lo que pueden estar contaminados con
+                                    bacterias.
+                                </p>
+
+                            </div>
+
+                            <div *ngIf="plan_Saneamiento.desecho">
+                                <h4>Desechos sólidos</h4>
+                                <p>
+                                    Debe la empresa contar con la infraestructura, elementos, áreas, recursos y procedimientos que garanticen una eficiente
+                                    labor de recolección, conducción, manejo, almacenamiento interno, clasificación, transporte y disposición final de los
+                                    desechos sólidos, lo cual tendrá que hacerse observando las normas de higiene y salud ocupacional establecidas con el
+                                    propósito de evitar la contaminación de los alimentos, áreas, dependencias y equipos, y el deterioro del medio ambiente.
+                                </p>
+                                <img src="assets/image/colores_basura.png" alt="">
+                            </div>
+
+                            <div *ngIf="plan_Saneamiento.plaga">
+                                <h4>Control de plagas</h4>
+                                <p>
+                                    Las plagas deben ser objeto de un programa de control específico, el cual debe involucrar el concepto de control
+                                    integral, apelando a la aplicación armónica de las diferentes medidas de control conocidas, con especial énfasis en las
+                                    radicales y de orden preventivo.
+                                </p>
+                                <img src="assets/image/Master_PlanManejo_Integrado_de_Plagas.png" alt="">
+                                <p>
+                                    Para mayor información, puedes consultar aquí:
+
+                                    <a href="https://procplag.com/sin-categoria/diseno-del-plan-de-control-de-plagas-p-c-p/" target="_blank" class="consulta">
+                                        Diseño del plan de control de plagas (p.c.p) – PROCPLAG
+                                    </a>
+                                </p>
+                            </div>
+
+                            <div *ngIf="plan_Saneamiento.agua">
+                                <h4>Abastecimiento y suministro de agua potable</h4>
+                                <p>
+                                    Todos los establecimientos dedicados a la manufactura de los alimentos, deben tener documentado el proceso de
+                                    abastecimiento de agua, e incluir:
+                                    <br><br>
+                                    <li>
+                                        Fuente de captación o suministro, tratamientos realizados, manejo, diseño y capacidad del tanque de almacenamiento,
+                                        distribución
+                                    </li>
+
+                                    <li>
+                                        Mantenimiento, limpieza y desinfección de redes y tanque de almacenamiento
+                                    </li>
+
+                                    <li>
+                                        Controles realizados para
+                                        garantizar el cumplimiento de los requisitos fisicoquímicos y microbiológicos establecidos en la normatividad vigente,
+                                        así como los registros que soporten el cumplimiento de estos.
+                                    </li>
+                                    
+                                </p>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a class="retrocede" (click)="button_back()">Anterior</a>
+                        <a class="siguiente" (click)="button_next()">Siguiente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Train</title>
+</head>
+
+<body>
+    <module-navbar [titulo]="titulos[7]"></module-navbar>
+    <content-dropdowns [titular]="titulos[7]"></content-dropdowns>
+    <div class="contenedor-base">
+        <div class="contenedor-titulo">
+            <h6>modulo {{module_selected[7]}}</h6>
+            <h3>{{titulos[7]}}</h3>
+        </div>
+        <div class="cartas">
+            <div class="carta" (click)="texto8()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/saneamiento.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[0]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

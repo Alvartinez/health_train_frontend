@@ -1,0 +1,211 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <a class="cierre" (click)="cierre()">
+                <img src="../../../../assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="content">
+                    <div class="list-topics">
+                        <h3>LEGISLACIÓN</h3>
+
+                        <nav>
+                            <ol>
+                            
+                                <li (click)="vista1979()">LEY 9 DEL 1979</li>
+                                <li (click)="vista1997()">DECRETO 3075 DE 1997</li>
+                                <li (click)="vista2002()"> DECRETO 60 DEL 2002 </li>
+                                <li (click)="vista2005()"> RESOLUCIÓN 5109 DEL 2005 </li>
+                                <li (click)="vista1575()"> DECRETO 1575 DEL 2007 </li>
+                                <li (click)="vista2115()"> RESOLUCIÓN 2115 DEL 2007 </li>
+                                <li (click)="vista2012()"> RESOLUCIÓN 683 DEL 2012 </li>
+                                <li (click)="vista2013()"> RESOLUCIÓN 2674 DE 2013 </li>
+                                <li (click)="vista2019()"> RESOLUCIÓN 2184 DE 2019 </li>
+                                <li (click)="vista2021()"> RESOLUCIÓN 810 DEL 2021 </li>
+                            
+                            </ol>
+                        </nav>
+
+                    </div>
+
+                    <div class="board">
+                        <div class="board-content">
+
+                            <!--Contenido LEY 9 DEL 1979-->
+                            <div *ngIf="legislaciones.a1979" class="a1979">
+                                <h4>LEY 9 DEL 1979</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    La cual establece las normas sanitarias para la prevención y control de los agentes biológicos, físicos o
+                                    químicos que
+                                    alteran las características del ambiente exterior de las edificaciones hasta hacerlo peligroso para la salud
+                                    humana.
+                                </p>
+                                <a href="https://www.minsalud.gov.co/normatividad_nuevo/ley%200009%20de%201979.pdf" class="consulta"
+                                    target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido DECRETO 3075 DE 1997-->
+                            <div *ngIf="legislaciones.a1997" class="a1997">
+                                <h4>DECRETO 3075 DE 1997</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    La cual establece que todas las fábricas de alimentos deben contar con un sistema de control y aseguramiento de
+                                    la
+                                    calidad, el cual debe ser esencialmente preventivo y cubrir todas las etapas de procesamiento del alimento,
+                                    desde la
+                                    obtención de materias primas e insumos, hasta la distribución de productos terminados.
+                                </p>
+                                <a href="https://www.minsalud.gov.co/Normatividad_Nuevo/DECRETO%203075%20DE%201997.pdf" class="consulta"
+                                    target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido DECRETO 60 DEL 2002-->
+                            <div *ngIf="legislaciones.a2002" class="a2002">
+                                <h4>DECRETO 60 DEL 2002</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    Decreto por el cual se promueve la aplicación del sistema de análisis de peligros y puntos críticos, - HACCP en
+                                    la
+                                    fábrica de alimentos, y se reglamenta el proceso de certificación.
+                                </p>
+                                <a href="https://www.minsalud.gov.co/Normatividad_Nuevo/DECRETO%200060%20DE%202002.pdf" class="consulta"
+                                    target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido RESOLUCIÓN 5109 DEL 2005-->
+                            <div *ngIf="legislaciones.a2005" class="a2005">
+                                <h4>RESOLUCIÓN 5109 DEL 2005</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    Por la cual se establece el reglamento técnico sobre los requisitos de rotulado o etiquetado que deben cumplir
+                                    los
+                                    alimentos envasados y materias primas de alimentos para consumo humano.
+                                </p>
+                                <a href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/DIJ/Resolucion%205109%20de%202005.pdf"
+                                    class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido DECRETO 1575 DEL 2007-->
+                            <div *ngIf="legislaciones.a1575_2007" class="a1575_2007">
+                                <h4>DECRETO 1575 DEL 2007</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    El objeto del presente decreto es establecer el sistema para la protección y control de la calidad del agua, con
+                                    el fin
+                                    de monitorear, prevenir y controlar los riesgos para la salud humana causados por su consumo, exceptuando el
+                                    agua
+                                    envasada.
+                                </p>
+                                <a href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma_pdf.php?i=30007" class="consulta"
+                                    target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido RESOLUCIÓN 2115 DEL 2007-->
+                            <div *ngIf="legislaciones.a2115_2007" class="a2115_2007">
+                                <h4>RESOLUCIÓN 2115 DEL 2007</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    Por medio de la cual se señalan características, instrumentos básicos y frecuencias del sistema de control y
+                                    vigilancia
+                                    para la calidad del agua para consumo humano.
+                                </p>
+                                <a href="https://minvivienda.gov.co/sites/default/files/normativa/2115%20-%202007.pdf" class="consulta"
+                                    target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido RESOLUCIÓN 683 DEL 2012-->
+                            <div *ngIf="legislaciones.a2012" class="a2012">
+                                <h4>RESOLUCIÓN 683 DEL 2012</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    Establece el Reglamento Técnico, mediante el cual se señalan los requisitos sanitarios que deben cumplir los
+                                    materiales,
+                                    objetos, envases y equipamientos destinados a entrar en contacto con alimentos y bebidas para consumo humano,
+                                    con el fin
+                                    de proteger la salud humana y prevenir las prácticas que puedan inducir a error a los consumidores. Se estipula
+                                    que
+                                    corresponde al Instituto Nacional de Vigilancia de Medicamentos y Alimentos (Invima), y a las Direcciones
+                                    Territoriales de Salud, ejercer las funciones de inspección, vigilancia y control. Finalmente, se
+                                    establece que la Resolución empezará a regir dentro de los 9 meses siguientes contados a partir de la fecha de
+                                    su
+                                    publicación en el Diario Oficial, para que las personas naturales o jurídicas puedan adaptar sus procesos y/o
+                                    productos
+                                    a las condiciones establecidas en la misma.
+                                </p>
+                                <a href="https://fenavi.org/wp-content/uploads/2019/02/RESOLUCION_683_DE_2012.pdf" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido RESOLUCIÓN 2674 DE 2013-->
+                            <div *ngIf="legislaciones.a2013" class="a2013">
+                                <h4>RESOLUCIÓN 2674 DE 2013</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    Establece los requisitos sanitarios que deben cumplir las personas naturales y/o jurídicas que ejercen
+                                    actividades de
+                                    fabricación, procesamiento, preparación, envase, almacenamiento, transporte, distribución y comercialización de
+                                    alimentos y materias primas de alimentos y los requisitos para la notificación, permiso o registro sanitario de
+                                    los
+                                    alimentos, según el riesgo en salud pública, con el fin de proteger la vida y la salud de las personas.
+                                </p>
+                                <a href="https://www.minsalud.gov.co/sites/rid/Lists/BibliotecaDigital/RIDE/DE/DIJ/resolucion-2674-de-2013.pdf"
+                                    class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido RESOLUCIÓN 2184 DE 2019-->
+                            <div *ngIf="legislaciones.a2019" class="a2019">
+                                <h4>RESOLUCIÓN 2184 DE 2019</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    Por la cual se modifica la Resolución 668 de 2016 sobre uso racional de bolsas plásticas y se adoptan otras
+                                    disposiciones. (Código de colores)
+                                </p>
+                                <a href="https://www.minambiente.gov.co/wp-content/uploads/2021/08/resolucion-2184-de-2019.pdf" class="consulta"
+                                    target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--Contenido RESOLUCIÓN 810 DEL 2021-->
+                            <div *ngIf="legislaciones.a2021" class="a2021">
+                                <h4>RESOLUCIÓN 810 DEL 2021</h4>
+                                <span>Objeto</span>
+                                <p>
+                                    Por la cual se establece el reglamento técnico sobre los requisitos de etiquetado nutricional y frontal que
+                                    deben
+                                    cumplir los alimentos envasados o empacados para consumo humano.
+                                </p>
+                                <a href="https://www.minsalud.gov.co/Normatividad_Nuevo/Resoluci%C3%B3n%20No.%20810de%202021.pdf" class="consulta"
+                                    target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a class="retrocede" (click)="button_back()">Anterior</a>
+                        <a class="siguiente" (click)="button_next()">Siguiente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

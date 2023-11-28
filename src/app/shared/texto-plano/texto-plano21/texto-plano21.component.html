@@ -1,0 +1,229 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <a class="cierre" (click)="cierre()">
+                <img src="../../../../assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="content">
+                    <div class="list-topics">
+                        <h3>Instituciones</h3>
+
+                        <div class="container-list">
+                            <div class="tab">
+                                <input type="radio" name="acc" id="acc1">
+                                <label for="acc1">
+                                    <h4>Internacionales</h4>
+                                </label>
+                                <div class="content-tab">
+                                    <ol>
+                                        <li (click)="Codex()">Codex alimentarius</li>
+                                        <li (click)="Fsma()">FSMA: Food Safety Modernization Act</li>
+                                        <li (click)="Gfsi()">GFSI: Global Food Safety Initiative</li>
+                                        <li (click)="Ops()">OPS: Organización Panamericana de la Salud</li>
+                                        <li (click)="Fda()">FDA: Food and Drug Administration</li>
+                                        <li (click)="Oms()">OMS: Organización Mundial de la Salud</li>
+                                        <li (click)="Cdc()">CDC: Centros para el Control y la Prevención de Enfermedades</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <div class="tab">
+                                <input type="radio" name="acc" id="acc2">
+                                <label for="acc2">
+                                    <h4>Nacionales</h4>
+                                </label>
+                                <div class="content-tab">
+                                    <ol>
+                                        <li (click)="Invima()">INVIMA: Instituto Nacional de Vigilancia de Medicamentos y Alimentos</li>
+                                        <li (click)="Ins()">INS - Instituto Nacional de Salud</li>
+                                        <li (click)="Eria()">ERIA - Evaluación de Riesgos En Inocuidad De Alimentos</li>
+                                    </ol>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="board">
+                        <div class="board-content">
+
+                        <!--Internacionales-->
+                            <!--Codex alimentarius-->
+                            <div *ngIf="institucionesInternacionales.codex" class="codex">
+                                <h4>Codex alimentarius</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Es un conjunto de normas, directrices y códigos de prácticas aprobados por la Comisión del Codex Alimentarius
+                                    que
+                                    garantizan que los alimentos sean saludables y puedan comercializarse.
+                                </p>
+                                <a href="https://www.fao.org/fao-who-codexalimentarius/es/" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--FSMA-->
+                            <div *ngIf="institucionesInternacionales.fsma" class="fsma">
+                                <h4>FSMA: Food Safety Modernization Act</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Es la reforma más radical de nuestras leyes de inocuidad alimentaria en más de 70 años, la cual fue promulgada
+                                    por el
+                                    Presidente Obama el 4 de enero de 2011. Su objetivo es garantizar que el suministro de alimentos de los Estados
+                                    Unidos
+                                    sea inocuo desplazando el enfoque dedicado a la respuesta a la contaminación hacia la prevención.
+                                </p>
+                                <a href="https://www.intedya.com/internacional/fichasproducto/Presentacion_ley-de-modernizacion-de-inocuidad-alimentaria-fsma.pdf"
+                                    class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--GFSI-->
+                            <div *ngIf="institucionesInternacionales.gfsi" class="gfsi">
+                                <h4>GFSI: Global Food Safety Initiative</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Es una Fundación sin ánimo de lucro creada en el año 2000 por el Foro de la Industria de Alimentos (The Food
+                                    Business
+                                    Forum, Red mundial constituida por empresas minoristas de alimentos y sus proveedores) con el objetivo de llevar
+                                    a la
+                                    mejora continua los sistemas de gestión de seguridad (inocuidad) alimentaria a fin de generar confianza en el
+                                    suministro
+                                    de alimentos inocuos a los consumidores en todo el mundo.
+                                </p>
+                                <a href="https://www.afi-internacional.com/que-es-gfsi/" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--OPS-->
+                            <div *ngIf="institucionesInternacionales.ops" class="ops">
+                                <h4>OPS: Organización Panamericana de la Salud</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Es un organismo internacional de salud pública con 100 años de experiencia, dedicados a mejorar la salud y las
+                                    condiciones de vida de los pueblos de las Américas. Goza de reconocimiento internacional como parte del Sistema
+                                    de
+                                    las
+                                    Naciones Unidas, y actúa como Oficina Regional para las Américas de la Organización Mundial de la Salud. Dentro
+                                    del
+                                    Sistema Interamericano, es el organismo especializado en salud.
+                                </p>
+                                <a href="https://www.paho.org/es" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--FDA-->
+                            <div *ngIf="institucionesInternacionales.fda" class="fda">
+                                <h4>FDA: Food and Drug Administration</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Es la agencia gubernamental de Estados Unidos responsable de la regulación de alimentos, medicamentos (humanos y
+                                    veterinarios), cosméticos, médicos biológicos (incluyendo derivados sanguíneos) y vacunas, entre otros.
+                                </p>
+                                <a href="https://www.fda.gov/about-fda/fda-en-espano" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--OMS-->
+                            <div *ngIf="institucionesInternacionales.oms" class="oms">
+                                <h4>OMS: Organización Mundial de la Salud</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Es la autoridad directiva y coordinadora de la acción sanitaria en el sistema de las Naciones Unidas. Es la
+                                    organización
+                                    responsable de desempeñar una función de liderazgo en los asuntos sanitarios mundiales, configurar la agenda de
+                                    las
+                                    investigaciones en salud, establecer normas, articular opciones de política basadas en la evidencia, prestar
+                                    apoyo
+                                    técnico a los países y vigilar las tendencias sanitarias mundiales.
+                                </p>
+                                <a href="https://www.who.int/es" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--CDC-->
+                            <div *ngIf="institucionesInternacionales.cdc" class="cdc">
+                                <h4>CDC: Centros para el Control y la Prevención de Enfermedades</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Agencia del Gobierno federal de los Estados Unidos cuya misión es proteger la salud pública mediante la
+                                    prevención y el
+                                    control de enfermedades, lesiones y discapacidades
+                                </p>
+                                <a href="https://www.cdc.gov/spanish/index.html" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                        
+                        <!--Nacionales-->
+
+                            <!--INVIMA-->
+                            <div *ngIf="institucionesNacionales.invima" class="invima">
+                                <h4>INVIMA: Instituto Nacional de Vigilancia de Medicamentos y Alimentos</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Agencia Regulatoria Nacional, una entidad de vigilancia y control de carácter técnico científico, que trabaja
+                                    para la
+                                    protección de la salud individual y colectiva de los colombianos, mediante la aplicación de las normas
+                                    sanitarias
+                                    asociadas al consumo y uso de alimentos, medicamentos, dispositivos médicos y otros productos objeto de
+                                    vigilancia
+                                    sanitaria.
+                                </p>
+                                <a href="https://www.invima.gov.co/" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--INS-->
+                            <div *ngIf="institucionesNacionales.ins" class="ins">
+                                <h4>INS - Instituto Nacional de Salud</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Es una entidad pública de carácter científico-técnico en salud pública, de cobertura nacional, que contribuye a
+                                    la
+                                    protección de la salud en Colombia mediante la gestión de conocimiento, el seguimiento al estado de la salud de
+                                    la
+                                    población y la provisión de bienes y servicios de interés en salud pública.
+                                </p>
+                                <a href="https://www.ins.gov.co/Paginas/Inicio.aspx" class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+                            
+                            <!--ERIA-->
+                            <div *ngIf="institucionesNacionales.eria" class="eria">
+                                <h4>ERIA - Evaluación de Riesgos En Inocuidad De Alimentos</h4>
+                                <span>Definición</span>
+                                <p>
+                                    Grupo técnico-científico que desarrolla estudios de evaluación de riesgos para ser utilizados por parte de
+                                    entidades
+                                    gubernamentales, como soporte para el desarrollo del Sistema de Medidas Sanitarias y Fitosanitarias del país, la
+                                    expedición de las medidas pertinentes y contribuir a la salud de la población colombiana, mediante la evaluación
+                                    de los
+                                    riesgos asociados a la inocuidad de los alimentos consumidos en el país.
+                                </p>
+                                <a href="https://www.ins.gov.co/Direcciones/Vigilancia/Paginas/Evaluaci%C3%B3n-de-Riesgos-en-Inocuidad-de-Alimentos-(ERIA).aspx"
+                                    class="consulta" target="_blank">
+                                    VER MÁS
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a class="retrocede" (click)="button_back()">Anterior</a>
+                        <a class="siguiente" (click)="button_next()">Siguiente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

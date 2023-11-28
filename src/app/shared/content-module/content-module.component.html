@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Train</title>
+</head>
+
+<body>
+    <module-navbar [titulo]="titulos[0]"></module-navbar>
+    <content-dropdowns [titular]="titulos[0]"></content-dropdowns>
+    <div class="contenedor-base">
+        <div class="contenedor-titulo">
+            <h6>modulo {{module_selected[0]}}</h6>
+            <h3>{{titulos[0]}}</h3>
+        </div>
+        <div class="cartas">
+            <div class="carta" (click)="contenidoLinea()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/linea_tiempo.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[0]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+             
+            <div class="carta" (click)="texto()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/ilustracion-concepto-retrovirus_114360-7597.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[1]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta" (click)="texto1()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/alimentosVirales.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[2]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carta" (click)="texto12()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/alimentosContaminados.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[3]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</body>
+
+</html>

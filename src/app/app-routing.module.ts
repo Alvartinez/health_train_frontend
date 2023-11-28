@@ -1,43 +1,41 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './components/home/home/home.component';
-import { LoginComponent } from './components/login/login/login.component';
-import { UserHomeComponent } from './components/user-home/user-home/user-home.component';
-import { RegisterComponent } from './components/register/register/register.component';
+import {  RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './utils/auth.guard';
 import { DescriptionCourseComponent } from './components/description-course/description-course/description-course.component';
 import { CourseContentComponent } from './components/course-content/course-content.component';
+import { DiccionarioComponent } from './shared/diccionario/diccionario.component';
+import { PruebaComponent } from './shared/prueba/prueba.component';
 
 const routes: Routes = [
   {
-    path: 'home',
-    component: HomeComponent
+    path: '',
+    redirectTo: 'healthtrain',
+    pathMatch: 'full', // Asegura que coincida con la URL completa
   },
   {
-    path: 'login',
-    component: LoginComponent
+    path: 'healthtrain',
+    loadChildren: () => import('./home/routers/home-routing.module').then(m => m.HomeRoutingModule)
   },
-    {
-    path: 'register',
-    component: RegisterComponent
-  },
-  {
-    path: 'user-home',
-    component: UserHomeComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path: 'description-course',
-    component: DescriptionCourseComponent
-  },
-  {
-    path: "course-content",
-    component: CourseContentComponent, 
-    canActivate:[AuthGuard]
-  },
+
+
+  // {
+  //   path: 'description-course',
+  //   component: DescriptionCourseComponent
+  // },
+
+  // {
+  //   path: "diccionario",
+  //   component: DiccionarioComponent,
+  //   canActivate: [AuthGuard]
+  // },
+  // {
+  //   path: "prueba",
+  //   component: PruebaComponent,
+  //   canActivate: [AuthGuard]
+  // },
   {
     path: '**',
-    redirectTo: 'home'
+    redirectTo: 'healthtrain/error'
   }
 ];
 
@@ -45,4 +43,5 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule { }

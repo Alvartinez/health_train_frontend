@@ -1,0 +1,12 @@
+.contenedor-base{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.contenedor-base content-dropdowns{
+    display: flex;
+    align-self: start;
+}

@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="titulo">
+                <h1>Examen:</h1>
+                <h2>Buenas prácticas de manufactura</h2>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section *ngIf="aviso" class="examen">
+            <div class="container-exam">
+                <div class="enunciado">
+                    <p class="objetivo">
+                        <b>Objetivo:</b> Determinar el nivel de conocimientos actual sobre Buenas Prácticas de Manufactura en la industria alimentaria en los estudiantes.
+                    </p>
+                    <p class="indicacion">
+                        Apreciado estudiante, esperamos contar con sus valiosas respuestas, a esta evaluación diagnóstica. <br> A continuación, Lea detenidamente las preguntas de selección múltiple con única respuesta, es decir, lea y escoja una sola respuesta correcta:
+                    </p>
+
+                    <button class="confirma" (click)="avisoCerrar()"><span>ACEPTO</span></button>
+                </div>
+            </div>
+        </section>
+
+        <section *ngIf="pregunta" class="tablero">
+            <div class="container-tablero">
+                <div class="enunciado-tablero">
+                    Apreciado estudiante, esperamos contar con sus valiosas respuestas, a esta evaluación diagnóstica. <br> A continuación, Lea detenidamente las preguntas de selección múltiple con única respuesta, es decir, lea y escoja una sola respuesta correcta:
+                </div>
+
+                <div class="preguntas">
+                    <div class="container-preguntas">
+                        <div class="pregunta">
+                            <h3>1.¿En qué año se construyó el microscopio primitivo?</h3>
+                        
+                            <label class="contenedor-pregunta">A- 1698
+                                <input type="radio" name="periodo1" value="1698" [(ngModel)]="answer1">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- 1674
+                                <input type="radio" name="periodo1" value="1674" [(ngModel)]="answer1">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- 1874
+                                <input type="radio" name="periodo1"  value="1874" [(ngModel)]="answer1">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>2.¿Quién descubrió la vida microscópica?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Anton van Leeuwenhoek
+                                <input type="radio" name="periodo2" value="Anton van Leeuwenhoek" [(ngModel)]="answer2">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Nicolas Papernot
+                                <input type="radio" name="periodo2" value="Nicolas Papernot" [(ngModel)]="answer2">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Everitt Murray
+                                <input type="radio" name="periodo2"  value="Everitt Murray" [(ngModel)]="answer2">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>3.¿Qué tipo de microorganismos, descubrió Louis Pasteur como causantes del proceso de fermentación de ciertos ácidos y sustancias indeseables (que agriaban el vino o la cerveza)?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Parásitos
+                                <input type="radio" name="periodo3" value="Parásitos" [(ngModel)]="answer3">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Virus
+                                <input type="radio" name="periodo3" value="Virus" [(ngModel)]="answer3">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Bacterias
+                                <input type="radio" name="periodo3"  value="Bacterias" [(ngModel)]="answer3">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>4.¿Cuál es la autoridad directiva y coordinadora de la acción sanitaria en el sistema de las Naciones Unidas?</h3>
+                        
+                            <label class="contenedor-pregunta">A- OMS
+                                <input type="radio" name="periodo4" value="OMS" [(ngModel)]="answer4">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- ONU
+                                <input type="radio" name="periodo4" value="ONU" [(ngModel)]="answer4">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- CDC
+                                <input type="radio" name="periodo4"  value="CDC" [(ngModel)]="answer4">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>5.¿Que son las BPM?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Bases de Producción Masiva
+                                <input type="radio" name="periodo5" value="Bases de Producción Masiva" [(ngModel)]="answer5">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Beneficios de Producción Moderna
+                                <input type="radio" name="periodo5" value="Beneficios de Producción Moderna" [(ngModel)]="answer5">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Buenas Prácticas de Manufactura 
+                                <input type="radio" name="periodo5"  value="Buenas Prácticas de Manufactura" [(ngModel)]="answer5">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>6.¿Quién creó los BPM?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Frederick Taylor 
+                                <input type="radio" name="periodo6" value="Frederick Taylor" [(ngModel)]="answer6">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Louis Pasteur
+                                <input type="radio" name="periodo6" value="Louis Pasteur" [(ngModel)]="answer6">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Joseph Lister 
+                                <input type="radio" name="periodo6"  value="Joseph Lister" [(ngModel)]="answer6">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>7.Autoridad sanitaria encargada de vigilar las (BPM) y emitir conceptos sanitarios frente a las mismas.</h3>
+                        
+                            <label class="contenedor-pregunta">A- INVIMA
+                                <input type="radio" name="periodo7" value="INVIMA" [(ngModel)]="answer7">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Codex Alimentarius
+                                <input type="radio" name="periodo7" value="Codex Alimentarius" [(ngModel)]="answer7">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Instituto Nacional de Salud (INS)
+                                <input type="radio" name="periodo7"  value="Instituto Nacional de Salud (INS)" [(ngModel)]="answer7">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>8.¿Quién certifica las BPM en Colombia?  </h3>
+                        
+                            <label class="contenedor-pregunta">A- ICA
+                                <input type="radio" name="periodo8" value="ICA" [(ngModel)]="answer8">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- INS
+                                <input type="radio" name="periodo8" value="INS" [(ngModel)]="answer8">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- OMS
+                                <input type="radio" name="periodo8"  value="OMS" [(ngModel)]="answer8">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>9.¿Qué garantiza las BPM en la industria alimentaria?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Reglamentar ambiental y sanitariamente la gestión integral de los residuos generados en la atención en salud y otras actividades.
+                                <input type="radio" name="periodo9" value="Reglamentar ambiental y sanitariamente la gestión integral de los residuos generados en la atención en salud y otras actividades." [(ngModel)]="answer9">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- La inocuidad en la cadena de producción de los alimentos procesados.
+                                <input type="radio" name="periodo9" value="La inocuidad en la cadena de producción de los alimentos procesados." [(ngModel)]="answer9">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Conocer de manera total cómo se está desempeñando el proceso de negocios actual.
+                                <input type="radio" name="periodo9"  value="Conocer de manera total cómo se está desempeñando el proceso de negocios actual." [(ngModel)]="answer9">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>10.¿Cuál es la norma vigente de las BPM en la industria alimentaria de Colombia?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Decreto 60 del 2002
+                                <input type="radio" name="periodo10" value="Decreto 60 del 2002" [(ngModel)]="answer10">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Resolución 2674 de 2013
+                                <input type="radio" name="periodo10" value="Resolución 2674 de 2013" [(ngModel)]="answer10">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Resolución 2184 del 2019
+                                <input type="radio" name="periodo10"  value="Resolución 2184 del 2019" [(ngModel)]="answer10">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>11.¿Cuáles son los 4 programas que hacen parte del plan de saneamiento?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Programa de limpieza y desinfección, programa de control integral de plagas, programa de manejo de residuos sólidos y líquidos, programa de abastecimiento de agua potable. 
+                                <input type="radio" name="periodo11" value="Programa de limpieza y desinfección, programa de control integral de plagas, programa de manejo de residuos sólidos y líquidos, programa de abastecimiento de agua potable." [(ngModel)]="answer11">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B-  Plan de limpieza, Plan de desinfección, Plan de Gestión de Riesgos Industriales, Plan de Control de Calidad Total.
+                                <input type="radio" name="periodo11" value="Plan de limpieza, Plan de desinfección, Plan de Gestión de Riesgos Industriales, Plan de Control de Calidad Total." [(ngModel)]="answer11">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Programa de Mantenimiento de Equipos de Oficina, Programa de Entrenamiento de Personal, Programa de Recreación y Tiempo Libre, Programa de Evaluación de Desempeño.
+                                <input type="radio" name="periodo11"  value="Programa de Mantenimiento de Equipos de Oficina, Programa de Entrenamiento de Personal, Programa de Recreación y Tiempo Libre, Programa de Evaluación de Desempeño." [(ngModel)]="answer11">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>12.Agencia del Gobierno federal de los Estados Unidos cuya misión es proteger la salud pública mediante la prevención y el control de enfermedades, lesiones y discapacidades.</h3>
+                        
+                            <label class="contenedor-pregunta">A- INVIMA
+                                <input type="radio" name="periodo12" value="INVIMA" [(ngModel)]="answer12">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Codex Alimentarius
+                                <input type="radio" name="periodo12" value="Codex Alimentarius" [(ngModel)]="answer12">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- CDC
+                                <input type="radio" name="periodo12"  value="CDC" [(ngModel)]="answer12">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>13.Resolución por medio de la cual se señalan características, instrumentos básicos y frecuencias del sistema de control y vigilancia para la calidad del agua para consumo humano.</h3>
+                        
+                            <label class="contenedor-pregunta">A- Resolución 2109 del 2007
+                                <input type="radio" name="periodo13" value="Resolución 2109 del 2007" [(ngModel)]="answer13">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Resolución 1504 del 2009
+                                <input type="radio" name="periodo13" value="Resolución 1504 del 2009" [(ngModel)]="answer13">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Resolución 2115 del 2007
+                                <input type="radio" name="periodo13"  value="Resolución 2115 del 2007" [(ngModel)]="answer13">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>14.¿Cuántas horas debe de recibir capacitación anualmente un Manipulador de industria alimentaria, Según la Resolución 2674 del 2013?</h3>
+                        
+                            <label class="contenedor-pregunta">A- 2 horas
+                                <input type="radio" name="periodo14" value="2 horas" [(ngModel)]="answer14">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- 5 horas 
+                                <input type="radio" name="periodo14" value="5 horas" [(ngModel)]="answer14">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- 10 horas
+                                <input type="radio" name="periodo14"  value="10 horas" [(ngModel)]="answer14">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>15.Medida de la disponibilidad del agua para las funciones biológicas y se relaciona con el agua libre, presente en un alimento.</h3>
+                        
+                            <label class="contenedor-pregunta">A- Actividad del agua (aw)
+                                <input type="radio" name="periodo15" value="Actividad del agua (aw)" [(ngModel)]="answer15">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Actividad antioxidante
+                                <input type="radio" name="periodo15" value="Actividad antioxidante" [(ngModel)]="answer15">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Humedad relativa 
+                                <input type="radio" name="periodo15"  value="Humedad relativa" [(ngModel)]="answer15">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>16.Los productos devueltos a la empresa por defectos de fabricación, que tengan incidencia sobre la inocuidad y calidad del alimento podrán someterse a procesos de reenvase, reelaboración, reproceso, corrección o reesterilización </h3>
+                        
+                            <label class="contenedor-pregunta">A- Si 
+                                <input type="radio" name="periodo16" value="Si" [(ngModel)]="answer16">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- No
+                                <input type="radio" name="periodo16" value="No" [(ngModel)]="answer16">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- En Algunos Casos 
+                                <input type="radio" name="periodo16"  value="En Algunos Casos" [(ngModel)]="answer16">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>17.¿Todas las fábricas de alimentos que procesen elaboren o envasen alimentos deben tener acceso a un laboratorio de pruebas externo?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Incorrecto, solo requiere de laboratorio interno 
+                                <input type="radio" name="periodo17" value="Incorrecto, solo requiere de laboratorio interno" [(ngModel)]="answer17">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Correcto, es necesario solo laboratorio externo
+                                <input type="radio" name="periodo17" value="Correcto, es necesario solo laboratorio externo" [(ngModel)]="answer17">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Incorrecto, deben tener acceso a un laboratorio propio o externo, no solo externo, sino de cualquier índole, siempre y cuando esté avalado para las pruebas requeridas. 
+                                <input type="radio" name="periodo17"  value="Incorrecto, deben tener acceso a un laboratorio propio o externo, no solo externo, sino de cualquier índole, siempre y cuando esté avalado para las pruebas requeridas." [(ngModel)]="answer17">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>18.El Ministerio de Ambiente y Desarrollo Sostenible, en conjunto con el Ministerio de Vivienda, Ciudad y Territorio, mediante Resolución, establecieron un código de colores unificado para la separación de residuos sólidos. ¿Cuáles son los colores establecidos actualmente?</h3>
+                        
+                            <label class="contenedor-pregunta">A- Verde- Blanco - Negro
+                                <input type="radio" name="periodo18" value="Verde- Blanco - Negro" [(ngModel)]="answer18">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Rojo- Azul- Verde - Blanco
+                                <input type="radio" name="periodo18" value="Rojo- Azul- Verde - Blanco" [(ngModel)]="answer18">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Azul- Blanco -Negro
+                                <input type="radio" name="periodo18"  value="Azul- Blanco -Negro" [(ngModel)]="answer18">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>19.Los plaguicidas y detergentes deben alma¬cenarse en áreas dependientes de producción y su manipulación sólo podrá hacerla el personal idóneo.</h3>
+                        
+                            <label class="contenedor-pregunta">A- Correcto
+                                <input type="radio" name="periodo19" value="Correcto" [(ngModel)]="answer19">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Incorrecto
+                                <input type="radio" name="periodo19" value="Incorrecto" [(ngModel)]="answer19">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Algunas veces
+                                <input type="radio" name="periodo19"  value="Algunas veces" [(ngModel)]="answer19">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                        <div class="pregunta">
+                            <h3>20.Respecto a las BPM Dentro de un restaurante, las áreas deben ser independientes de cualquier tipo de vivienda y no pueden ser utilizadas como dormitorio.</h3>
+                        
+                            <label class="contenedor-pregunta">A- Correcto
+                                <input type="radio" name="periodo20" value="Correcto" [(ngModel)]="answer20">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">B- Incorrecto
+                                <input type="radio" name="periodo20" value="Incorrecto" [(ngModel)]="answer20">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                            <label class="contenedor-pregunta">C- Algunas veces
+                                <input type="radio" name="periodo20"  value="Algunas veces" [(ngModel)]="answer20">
+                                <span class="checkmark"></span>
+                            </label>
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="panel">
+                    <button class="fin" (click)="culminar()">
+                        <span class="transition"></span>
+                        <span class="gradient"></span>
+                        <span class="label">Finalizar</span>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <section *ngIf="retro" class="modaal">
+        <div class="contenedor-modal">
+            <div class="modal-body">
+                <div class="content-body">
+                    <div class="titulo-modal">
+                        <h2>Resultados</h2>
+                    </div>
+    
+                    <div class="containerr">
+                        <div class="tableroA">
+                            <div class="titles">
+                                <h4 id="enun">Enunciado</h4>
+                                <h4 id="resp">Respuesta aprendiz</h4>
+                                <h4 id="resul"> Resultado</h4>
+                            </div>
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        1.¿En qué año se construyó el microscopio primitivo?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer1}}
+                                    </p>
+                                </div>
+    
+                                <div [ngStyle]="isCorrect1 ? correct_answer : wrong_answer" class="resultado"></div>
+    
+                            </div>
+    
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        2.¿Quién descubrió la vida microscópica?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer2}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect2 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+    
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        3.¿Qué tipo de microorganismos, descubrió Louis Pasteur como causantes del proceso de fermentación de ciertos ácidos y sustancias indeseables (que agriaban el vino o la cerveza)?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer3}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect3 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+    
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        4.¿Cuál es la autoridad directiva y coordinadora de la acción sanitaria en el sistema de las Naciones Unidas?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer4}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect4 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+    
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        5.¿Que son las BPM?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer5}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect5 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        6.¿Quién creó los BPM?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer6}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect6 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        7.Autoridad sanitaria encargada de vigilar las (BPM) y emitir conceptos sanitarios frente a las mismas.
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer7}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect7 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        8.¿Quién certifica las BPM en Colombia?  
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer8}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect8 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        9.¿Qué garantiza las BPM en la industria alimentaria?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer9}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect9 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        10.¿Cuál es la norma vigente de las BPM en la industria alimentaria de Colombia?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer10}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect10 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        11.¿Cuáles son los 4 programas que hacen parte del plan de saneamiento?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer11}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect11 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        12.Agencia del Gobierno federal de los Estados Unidos cuya misión es proteger la salud pública mediante la prevención y el control de enfermedades, lesiones y discapacidades. 
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer12}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect12 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        13.Resolución por medio de la cual se señalan características, instrumentos básicos y frecuencias del sistema de control y vigilancia para la calidad del agua para consumo humano
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer13}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect13 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        14.¿Cuántas horas debe de recibir capacitación anualmente un Manipulador de industria alimentaria, Según la Resolución 2674 del 2013?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer14}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect14 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        15.Medida de la disponibilidad del agua para las funciones biológicas y se relaciona con el agua libre, presente en un alimento.
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer15}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect15 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        16.Los productos devueltos a la empresa por defectos de fabricación, que tengan incidencia sobre la inocuidad y calidad del alimento podrán someterse a procesos de reenvase, reelaboración, reproceso, corrección o reesterilización 
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer16}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect16 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        17.¿Todas las fábricas de alimentos que procesen elaboren o envasen alimentos deben tener acceso a un laboratorio de pruebas externo? 
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer17}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect17 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        18.El Ministerio de Ambiente y Desarrollo Sostenible, en conjunto con el Ministerio de Vivienda, Ciudad y Territorio, mediante Resolución, establecieron un código de colores unificado para la separación de residuos sólidos. ¿Cuáles son los colores establecidos actualmente?
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer18}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect18 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+                        
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        19.Los plaguicidas y detergentes deben alma¬cenarse en áreas dependientes de producción y su manipulación sólo podrá hacerla el personal idóneo.
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer19}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect19 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="preguntaa">
+                                <div class="enunciadoo">
+                                    <p>
+                                        20.Respecto a las BPM Dentro de un restaurante, las áreas deben ser independientes de cualquier tipo de vivienda y no pueden ser utilizadas como dormitorio.
+                                    </p>
+    
+                                </div>
+    
+                                <div class="respuesta">
+                                    <p>
+                                        {{answer20}}
+                                    </p>
+                                </div>
+    
+                                <div class="resultado" [ngStyle]="isCorrect20 ? correct_answer : wrong_answer"></div>
+    
+                            </div>
+
+                            <div class="titulo-modal">
+                                <h2>Calificación: {{sum}}/20</h2>
+                            </div>
+
+                        </div>
+    
+                        <a class="button__finish" (click)="culminado()">
+                            Retroalimentación
+                        </a>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

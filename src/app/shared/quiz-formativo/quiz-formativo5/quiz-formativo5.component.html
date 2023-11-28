@@ -1,0 +1,234 @@
+<section *ngIf="finish && !reanudar">
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>Quiz formativo</h2>
+                    <a class="cierre" (click)="cierre()">
+                        <img src="assets/image/xQuiz.png">
+                    </a>
+                </div>
+
+                <div class="container">
+                    <div class="tablero">
+                        <div class="enunciado">
+                            <p>
+                                {{indicacion}}
+                            </p>
+                        </div>
+
+                        <div class="columna">
+                            <div class="columna_A">
+                                <ul>
+                                    <li>
+                                        1. {{enunciado1}}
+                                
+                                        <select name="lista_respuestas" id="lista_respuesta_1" [(ngModel)]="answer1">
+                                            <option selected disabled>Selecciona</option>
+                                            <option value="VERDADERO">VERDADERO</option>
+                                            <option value="FALSO">FALSO</option>
+                                        </select>
+                                
+                                    </li>
+                                
+                                    <li>
+                                        2. {{enunciado2}}
+                                
+                                        <select name="lista_respuestas" id="lista_respuesta_2" [(ngModel)]="answer2">
+                                            <option selected disabled>Selecciona</option>
+                                            <option value="VERDADERO">VERDADERO</option>
+                                            <option value="FALSO">FALSO</option>
+                                        </select>
+                                
+                                    </li>
+                                
+                                    <li>
+                                        3. {{enunciado3}}
+                                
+                                        <select name="lista_respuestas" id="lista_respuesta_3" [(ngModel)]="answer3">
+                                            <option selected disabled>Selecciona</option>
+                                            <option value="VERDADERO">VERDADERO</option>
+                                            <option value="FALSO">FALSO</option>
+                                        </select>
+                                
+                                    </li>
+                                
+                                    <li>
+                                        4. {{enunciado4}}
+                                
+                                        <select name="lista_respuestas" id="lista_respuesta_4" [(ngModel)]="answer4">
+                                            <option selected disabled>Selecciona</option>
+                                            <option value="VERDADERO">VERDADERO</option>
+                                            <option value="FALSO">FALSO</option>
+                                        </select>
+                                    </li>
+                                
+                                    <li>
+                                        5. {{enunciado5}}
+                                
+                                        <select name="lista_respuestas" id="lista_respuesta_5" [(ngModel)]="answer5">
+                                            <option selected disabled>Selecciona</option>
+                                            <option value="VERDADERO">VERDADERO</option>
+                                            <option value="FALSO">FALSO</option>
+                                        </select>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <a class="button__finish" (click)="culminar()">
+                        Culminar
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="!finish && !reanudar">
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>Resultados</h2>
+                </div>
+
+                <div class="container">
+                    <div class="tableroA">
+                        <div class="titles">
+                            <h4 id="enun">Enunciado</h4>
+                            <h4 id="resp">Respuesta aprendiz</h4>
+                            <h4 id="resul"> Resultado</h4>
+                        </div>
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    1. El manipulador de alimentos debe efectuarse un reconocimiento médico cada dos años por razones clínicas y
+                                    epidemiológicas.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer1}}
+                                </p>
+                            </div>
+
+                            <div [ngStyle]="isCorrect1 ? correct_answer : wrong_answer" class="resultado"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    2. En el año, el manipulador debe recibir 5 horas de capacitación.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer2}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect2 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    3. Como resultado de la valoración médica se debe expedir un certificado en el cual conste la aptitud o no para
+                                    la
+                                    manipulación de alimentos.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer3}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect3 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    4. Se permite tener esmalte transparente.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer4}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect4 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciadoA">
+                                <p>
+                                    5. Se colocarán en sitios estratégicos avisos alusivos a la obligatoriedad y necesidad de su observancia durante
+                                    la
+                                    manipulación de alimentos.
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer5}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect5 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+                    </div>
+
+                    <a class="button__finish" (click)="culminado()">
+                        Retroalimentación
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="reanudar">
+    <div class="background">
+    </div>
+    <div class="optionQuiz">
+        <div class="background-img">
+            <img src="assets/image/pinguino_repeat.png" alt="">
+        </div>
+        <div class="content">
+            <h2>REPETIR QUIZ</h2>
+            <p>Ya has realizado anteriormente el quiz.</p>
+            <span>¿Deseas realizarlo nuevamente?</span>
+            <ul class="chips">
+                <li class="chip-yes" (click)="aceptar()">
+                    Aceptar
+                </li>
+                <li class="chip-no" (click)="cancelar()">
+                    Cancelar
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

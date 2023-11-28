@@ -1,6 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Person } from 'src/app/interfaces/persona';
+import { ToastrService } from 'ngx-toastr';
 import { ErrorService } from 'src/app/services/error.service';
 import { PersonService } from 'src/app/services/persona.service';
 
@@ -11,27 +12,30 @@ import { PersonService } from 'src/app/services/persona.service';
 })
 export class UserNavbarComponent {
 
-  listPerson: Person[] = []
-  nombre: String | undefined = ""
+  nombre: String | undefined;
 
-  constructor(private router: Router, private _personService: PersonService, private _errorService: ErrorService) {}
+  constructor(private toastr: ToastrService, private router: Router, private _personService: PersonService, private _errorService: ErrorService) {}
   
   ngOnInit(): void {
-    this.getNombre();
+    this.getName();
   }
 
-  getNombre() {
+  getName(){
     this._personService.getPerson().subscribe({
-      next: (data) => {
-        this.listPerson = data;
-        this.nombre = this.listPerson[0].nombre;
+      next:(data) =>{
+        this.nombre = data.nombre;
+      },
+      error: (e: HttpErrorResponse) => {
+        this._errorService.msgError(e);
       }
     });
+
   }
 
   logOut() {
-    localStorage.removeItem("token");
-    this.router.navigate(["/login"]);
+    localStorage.removeItem("x-token");
+    this.toastr.success("¡Vuelva pronto!", "Exitoso");
+    this.router.navigate(["healthtrain","login"]);
   }
   
 }

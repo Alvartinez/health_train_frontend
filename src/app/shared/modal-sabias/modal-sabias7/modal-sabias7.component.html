@@ -1,0 +1,39 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+
+            <a class="cierre" (click)="cierre()">
+                <img src="assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="div-koala">
+                    <img id="koala-curioso" src="assets/image/lindo-koala.png" alt="">
+                </div>
+
+                <div class="container-info">
+
+                    <div class="titulo-modal">
+                        <h2>¿Sabías qué?</h2>
+                    </div>
+                    <div class="retrocede" (click)="retrocede()"> < </div>
+                    <div class="container">
+                        <p *ngIf="sabia1">
+                            La calidad tiene que ver con las características de un producto deseables por el consumidor, como lo son su sabor,
+                            presentación, tamaño, entre otros factores.
+                            <br>
+                            La inocuidad, es la suma de procesos que llevan a conseguir que el producto alimenticio esté libre de agentes
+                            contaminantes de cualquier tipo, a fin de evitar daños en los consumidores.
+                            <br>
+                            Ver el siguiente video sobre calidad e inocuidad alimentaria
+                        </p>
+                        <iframe *ngIf="sabia2" src="https://www.youtube.com/embed/UVWFMWYHHrw" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <div class="siguiente"  (click)="siguiente()"> > </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

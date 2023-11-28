@@ -1,0 +1,309 @@
+<section *ngIf="finish && !reanudar">
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>Quiz formativo</h2>
+                    <a class="cierre" (click)="cierre()">
+                        <img src="../../../assets/image/xQuiz.png">
+                    </a>
+                </div>
+
+                <div class="container">
+                    <div class="tablero">
+                        <div class="enunciadoQ">
+                            <p>
+                                {{indicacion}}
+                            </p>
+                        </div>
+
+                        <div class="preguntas">
+                            <div class="preguntas_respuestas">
+
+                                <div class="pregunta1">
+                                    <h3>1. {{enunciado1}}</h3>
+                                
+                                    <label class="contenedor-pregunta">A- Periodo Neolítico
+                                        <input type="radio" name="periodo" [(ngModel)]="answer1" value="Periodo Neolítico">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">B- Periodo Paleolítico
+                                        <input type="radio" name="periodo" [(ngModel)]="answer1" value="Periodo Paleolítico">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">C- Periodo Mesolítico
+                                        <input type="radio" name="periodo" [(ngModel)]="answer1" value="Periodo Mesolítico">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">D- Período Palenteolítico
+                                        <input type="radio" name="periodo" [(ngModel)]="answer1" value="Período Palenteolítico">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                </div>
+
+                                <div class="pregunta2">
+                                    <h3>2. {{enunciado2}}</h3>
+                                
+                                    <label class="contenedor-pregunta">A- Everitt Murray
+                                        <input type="radio" name="nicolas" [(ngModel)]="answer2" value="Everitt Murray">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">B- Ferdinad Cohn
+                                        <input type="radio" name="nicolas" [(ngModel)]="answer2" value="Ferdinad Cohn">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">C- Louis Pasteur
+                                        <input type="radio" name="nicolas" [(ngModel)]="answer2" value="Louis Pasteur">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">D- Francois Nicolas Appert
+                                        <input type="radio" name="nicolas" [(ngModel)]="answer2" value="Francois Nicolas Appert">
+                                        <span class="checkmark"></span>
+                                    </label>
+
+                                </div>
+
+                                <div class="pregunta3">
+                                    <h3>3. {{enunciado3}}</h3>
+                                
+                                    <label class="contenedor-pregunta">A. 1698
+                                        <input type="radio" name="anio" [(ngModel)]="answer3" value="1698">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">B. 1674
+                                        <input type="radio" name="anio" [(ngModel)]="answer3" value="1674">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">C. 1804
+                                        <input type="radio" name="anio" [(ngModel)]="answer3" value="1804">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">D. 1874
+                                        <input type="radio" name="anio" [(ngModel)]="answer3" value="1874">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                </div>
+
+                                <div class="pregunta4">
+                                    <h3>4. {{enunciado4}}</h3>
+                                
+                                    <label class="contenedor-pregunta">A- Justinus Kerner
+                                        <input type="radio" name="budd" [(ngModel)]="answer4" value="Justinus Kerner">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">B- William Budd
+                                        <input type="radio" name="budd" [(ngModel)]="answer4" value="William Budd">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">C- Louis Pasteur
+                                        <input type="radio" name="budd" [(ngModel)]="answer4" value="Louis Pasteur">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">D- Joseph Lister
+                                        <input type="radio" name="budd" [(ngModel)]="answer4" value="Joseph Lister">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                </div>
+
+                                <div class="pregunta5">
+                                    <h3>5. {{enunciado5}}</h3>
+                                
+                                    <label class="contenedor-pregunta">A- Parásitos
+                                        <input type="radio" name="same" [(ngModel)]="answer5" value="Parásitos">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">B- Virus
+                                        <input type="radio" name="same" [(ngModel)]="answer5" value="Virus">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">C- Bacterias
+                                        <input type="radio" name="same" [(ngModel)]="answer5" value="Bacterias">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                    <label class="contenedor-pregunta">D- Hongos
+                                        <input type="radio" name="same" [(ngModel)]="answer5" value="Hongos">
+                                        <span class="checkmark"></span>
+                                    </label>
+                                
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <a class="button__finish" (click)="culminar()">
+                        Culminar
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="!finish && !reanudar">
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <div class="content-body">
+                <div class="titulo-modal">
+                    <h2>Resultados</h2>
+                </div>
+
+                <div class="container">
+                    <div class="tableroA">
+                        <div class="titles">
+                            <h4 id="enun">Enunciado</h4>
+                            <h4 id="resp">Respuesta aprendiz</h4>
+                            <h4 id="resul"> Resultado</h4>
+                        </div>
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    1. ¿Cuál fue el Periodo en el cual se descubrió el fuego?
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer1}}
+                                </p>
+                            </div>
+
+                            <div [ngStyle]="isCorrect1 ? correct_answer : wrong_answer" class="resultado"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    2. ¿Cuál Personaje desarrolló métodos para conservar los alimentos en botellas de
+                                    vidrio selladas por medio
+                                    de
+                                    calentamiento en agua hirviendo?
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer2}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect2 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    3. ¿En qué año se construyó el microscopio primitivo?
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer3}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect3 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    4. ¿Qué Personaje abogó en 1856 por el uso del cloro en el suministro del agua, para
+                                    evitar contaminación de
+                                    esta
+                                    evitando el desarrollo de enfermedades como la fiebre tifoidea en humanos?
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer4}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect4 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+
+                        <div class="pregunta">
+                            <div class="enunciado">
+                                <p>
+                                    5. ¿Qué tipo de microorganismos, descubrió Louis Pasteur como causantes del proceso
+                                    de fermentación de
+                                    ciertos ácidos y
+                                    sustancias indeseables (que agriaban el vino o la cerveza)?
+                                </p>
+
+                            </div>
+
+                            <div class="respuesta">
+                                <p>
+                                    {{answer5}}
+                                </p>
+                            </div>
+
+                            <div class="resultado" [ngStyle]="isCorrect5 ? correct_answer : wrong_answer"></div>
+
+                        </div>
+                    </div>
+
+                    <a class="button__finish" (click)="culminado()">
+                        Retroalimentación
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section *ngIf="reanudar">
+    <div class="background">
+    </div>
+    <div class="optionQuiz">
+        <div class="background-img">
+            <img src="../../../assets/image/pinguino_repeat.png" alt="">
+        </div>
+        <div class="content">
+            <h2>REPETIR QUIZ</h2>
+            <p>Ya has realizado anteriormente el quiz.</p>
+            <span>¿Deseas realizarlo nuevamente?</span>
+            <ul class="chips">
+                <li class="chip-yes" (click)="aceptar()">
+                    Aceptar
+                </li>
+                <li class="chip-no" (click)="cancelar()">
+                    Cancelar
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>

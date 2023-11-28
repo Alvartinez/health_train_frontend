@@ -1,0 +1,89 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    min-height: 100vh;
+    background-color: #f8fa8c;
+}
+
+.contenedor-modal {
+    width: 80%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    transition: opacity .5s;
+    animation: show 1s .5s backwards;
+}
+
+@keyframes show {
+
+    0% {
+        transform: translateY(-150vh);
+    }
+
+}
+
+.modal-body {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    opacity: .8;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.452);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cierre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    width: 5%;
+    cursor: pointer;
+}
+
+.cierre img {
+    width: 100%;
+}
+
+.container{
+    position: relative;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.507);
+}
+
+.expansion{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 250px;
+    overflow: hidden;
+    resize: both;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.507);
+}
+
+.container iframe{
+    margin: 5px;
+    border-radius: 10px;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.418);
+}

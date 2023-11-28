@@ -1,0 +1,121 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+            <a class="cierre" (click)="cierre()">
+                <img src="../../../../assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="content">
+                    <div class="list-topics">
+                        <h3>
+                            LOCALIZACIÓN Y ACCESOS
+                        </h3>
+
+                        <ol>
+                            <li (click)="diseno()">Diseño y construcción</li>
+                            <li (click)="agua()">Abastecimiento de aguas</li>
+                            <li (click)="liquido()">Disposición de residuos líquidos</li>
+                            <li (click)="solido()">Disposición de residuos sólidos</li>
+                        </ol>
+                    </div>
+
+                    <div class="board">
+                        <div class="board-content">
+                            <div *ngIf="items.localizacion1">
+                                <h4>
+                                    LOCALIZACIÓN Y ACCESOS
+                                </h4>
+                                <p>
+                                    Estarán ubicados en lugares aislados de cualquier foco de insalubridad que represente riesgos potenciales para la
+                                    contaminación del alimento.
+                                    Sus accesos y alrededores se mantendrán limpios, libres de acumulación de basuras y deberán tener superficies
+                                    pavimentadas o recubiertas con materiales que faciliten el mantenimiento sanitario e impidan la generación de polvo, el
+                                    estancamiento de aguas o la presencia de otras fuentes de contaminación para el alimento.
+                                </p>
+                            </div>
+
+                            <div *ngIf="items.localizacion2">
+                                <h4>
+                                    DISEÑO Y CONSTRUCCIÓN
+                                </h4>
+                                <p>
+                                    La edificación debe estar diseñada y construida de manera que proteja los ambientes de producción e impida la entrada de
+                                    polvo, lluvia, suciedades u otros contaminantes, así como del ingreso y refugio de plagas y animales domésticos.
+                                    <br>
+                                    La edificación y sus instalaciones deben estar construidas de manera que se faciliten las operaciones de limpieza,
+                                    desinfección y control de plagas según lo establecido en el plan de saneamiento del establecimiento.
+                                    <br>
+                                    Sus áreas deben ser independientes y separadas físicamente de cualquier tipo de vivienda y no pueden ser utilizadas como
+                                    dormitorio.
+                                </p>
+                            </div>
+
+                            <div *ngIf="items.localizacion3">
+                                <h4>
+                                    ABASTECIMIENTO DE AGUA
+                                </h4>
+
+                                <ul>
+                                    <li>
+                                        El agua que se utilice debe ser de calidad potable y cumplir con las normas vigentes establecidas por el Ministerio de
+                                        Salud y Protección Social.
+                                    </li>
+                                    <li>
+                                        El establecimiento debe disponer de un tanque de almacenamiento de agua con capacidad suficiente para un día de
+                                        trabajo, garantizando la potabilidad de esta
+                                    </li>
+                                    <li>
+                                        La construcción y el material de dicho tanque se realizará conforme a lo establecido en las normas sanitarias vigentes
+                                        y deberá cumplir con los siguientes requisitos:
+                                        <ol>
+                                            <li>
+                                                Los pisos, paredes y tapas deben estar construidos con materiales que no generen sustancias o contaminantes tóxicos,
+                                                deben ser resistentes, no porosos, impermeables, no ab¬sorbentes y con acabados libres de grietas o defectos que
+                                                dificulten la limpieza y desinfección.
+                                            </li>
+                                            <li>
+                                                Debe ser de fácil acceso para limpieza y desinfección periódica según lo estable-cido en el plan de saneamiento.
+                                            </li>
+                                        </ol>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div *ngIf="items.localizacion4">
+                                <h4>
+                                    DISPOSICIÓN DE RESIDUOS LÍQUIDOS
+                                </h4>
+                                <p>
+                                    Dispondrán de sistemas sanitarios adecuados para la recolección, el tratamiento y la disposición de aguas residuales,
+                                    aprobadas por la autoridad competente.
+                                </p>
+                            </div>
+
+                            <div *ngIf="items.localizacion5">
+                                <h4>
+                                    DISPOSICIÓN DE RESIDUOS SÓLIDOS
+                                </h4>
+                                <p>
+                                    Los residuos sólidos que se generen deben:
+                                    <li>
+                                        Ser ubicados de manera tal que no representen riesgo de contaminación al alimento, a los ambientes o superficies de
+                                        potencial contacto con este.
+                                    </li>
+                                    <li>
+                                        Ser removidos frecuentemente de las áreas de producción y disponerse de manera que se elimine la generación de malos
+                                        olores, el refugio y alimento de animales y plagas y que no contribuya de otra forma al deterioro ambiental.
+                                    </li>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="botones">
+                        <a class="retrocede" (click)="button_back()">Anterior</a>
+                        <a class="siguiente" (click)="button_next()">Siguiente</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

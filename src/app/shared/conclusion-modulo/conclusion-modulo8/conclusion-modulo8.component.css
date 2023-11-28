@@ -1,0 +1,123 @@
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to top, #5F9EA0, #7FFFD4 100%);
+}
+
+.contenedor-modal {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    transition: opacity .5s;
+    animation: show 1s .5s backwards;
+}
+
+@keyframes show {
+
+    0% {
+        transform: translateY(-150vh);
+    }
+
+}
+
+.modal-body {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    opacity: .8;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.content-body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 80%;
+    padding: 20px;
+    text-align: justify;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+}
+
+.titulo-modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.titulo-modal h2 {
+    font-weight: 700;
+    font-size: 28px;
+    color: #0D6EFD;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 40px;
+    width: 90%;
+    gap: 20px;
+}
+
+.text-conclusion {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.interrupcion-modulo {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.interrupcion-modulo a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #fafdff;
+    font-size: 12px;
+    border-radius: 15px;
+}
+
+.stopModulo {
+    background-color: #0D6EFD;
+    padding: 18px 10px;
+}
+
+.stopModulo:hover {
+    background-color: #239bb0;
+    border: 2px dashed #fdffff;
+    font-weight: 700;
+}
+
+.finishModulo {
+    background-color: #23B06C;
+    padding: 18px 18px;
+}
+
+.finishModulo:hover {
+    background-color: #23b07a;
+    border: 2px dashed #fdfffe;
+    font-weight: 700;
+}

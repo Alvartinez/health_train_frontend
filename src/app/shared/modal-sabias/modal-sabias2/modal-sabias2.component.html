@@ -1,0 +1,61 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+
+            <a class="cierre" (click)="cierre()">
+                <img src="assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="div-koala">
+                    <img id="koala-curioso" src="assets/image/lindo-koala.png" alt="">
+                </div>
+
+                <div class="container-info">
+
+                    <div class="titulo-modal">
+                        <h2>¿Sabías qué?</h2>
+                    </div>
+                    <div class="retrocede" (click)="retrocede()"> < </div>
+                    <div class="container">
+                        <p *ngIf="sabia1">
+                            El agua es esencial para la supervivencia humana en Colombia existen diferentes parámetros para hacer control de la
+                            misma, a través de :
+                            <br>
+                            <b>Mapa de riesgo de calidad de agua (mapa de riesgo).</b> Es un instrumento , que define las acciones de
+                            inspección,
+                            vigilancia y control del riesgo asociado a las condiciones de calidad de las cuencas abastecedoras de sistemas de
+                            suministro de agua para consumo humano, las características físicas, químicas y microbiológicas del agua de las
+                            fuentes
+                            superficiales o subterráneas de una determinada región, que puedan generar riesgos graves a la salud humana si no
+                            son
+                            adecuadamente tratadas, independientemente de si provienen de una contaminación por eventos naturales o antrópicos.
+                        </p>
+
+                        <p *ngIf="sabia2">
+                            <b>Sistema de Información para la Vigilancia de la Calidad del Agua Potable, SIVICAP.</b> Herramienta informática
+                            que permite
+                            el reporte en línea de la información generada por las autoridades sanitarias departamentales, municipales y
+                            distritales
+                            como resultado de las acciones de inspección, vigilancia y control de calidad del agua para consumo humano
+                            realizadas
+                            por éstas sobre los sistemas de suministro, tratamiento y distribución de agua para consumo humano.
+                                
+                            <br>
+                            <b>Indice de Riesgo de Calidad del Agua para Consumo Humano (IRCA)</b> es un como un indicador que evalúa la calidad
+                            del agua
+                            para consumo humano, teniendo en cuenta los resultados de las características fisicoquímicas y 
+                        </p>
+
+                        <p *ngIf="sabia3">
+                            microbiológicas analizadas en las muestras de vigilancia reportadas por las Direcciones Territoriales de Salud (DTS), reportados a través del Sistema de Información para la Vigilancia de la Calidad del Agua Potable (SIVICAP) dando cumplimiento a lo dispuesto en el Decreto 1575 de 2007 y su Resolución reglamentaria 2115 del mismo año.
+                            <br>
+                            <b>EL Informe Nacional de Calidad del Agua (INCA)</b>, lo elaboran de manera anual, cuya información sirve como punto de referencia a las autoridades y sectores involucrados en la toma de decisiones, así como para la implementación de las acciones de control para prevenir y mitigar los daños a la salud de la población derivados del consumo del agua.
+                        </p>
+                            
+                    </div>
+                    <div class="siguiente" (click)="siguiente()"> > </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,58 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+
+            <a class="cierre" (click)="cierre()">
+                <img src="assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="div-koala">
+                    <img id="koala-curioso" src="assets/image/lindo-koala.png" alt="">
+                </div>
+
+                <div class="container-info">
+
+                    <div class="titulo-modal">
+                        <h2>¿Sabías qué?</h2>
+                    </div>
+                    <div class="retrocede" (click)="retrocede()"> < </div>
+                        <div class="container">
+                            <p *ngIf="sabia1">
+                                Un plan de saneamiento debe estar escrito y a disposición de la autoridad sanitaria competente; podrás comprender
+                                algo
+                                más con ayuda del siguiente video:
+                                <iframe src="https://www.youtube.com/embed/QX93uVplZeY" title="YouTube video player" frameborder="0"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen>
+                                </iframe>
+                            </p>
+                            <p *ngIf="sabia2">
+                                Cada procedimiento va a depender del tipo de lugar, si es una cafetería, si es un restaurante, una fábrica, un
+                                servicio
+                                de alimentación, por ejemplo:
+                                <li>
+                                    Cronograma: establecer si será de manera diaria, mensual, quincenal, el desarrollo de un procedimiento.
+                                </li>
+                            
+                                <li>
+                                    Registros: son todos aquellos formatos que vayas a necesitar diligenciar, desde una lista de asistencia, el uso
+                                    de algún
+                                    desinfectante, y ese formato una vez se diligencie se convertirá en un formato que será evidencia clave en caso
+                                    de una
+                                    auditoría de calidad.
+                                </li>
+                            
+                                <li>
+                                    Lista de chequeo: es una herramienta que te ayudará a organizar información, dependiendo del programa, o de la
+                                    actividad
+                                    a realizar.
+                                </li>
+                            </p>
+
+                        </div>
+                        <div class="siguiente" (click)="siguiente()"> > </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

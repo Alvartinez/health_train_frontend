@@ -1,0 +1,173 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-width: 1024px;
+    height: 100%;
+    min-height: 100vh;
+    background: linear-gradient(to top, #5F9EA0, #7FFFD4 100%);
+}
+
+.contenedor-modal{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    transition: opacity .5s;
+    animation: show 1s .5s backwards;
+}
+
+@keyframes show {
+
+    0% {
+        transform: translateY(-150vh);
+    }
+
+}
+
+.modal-body{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: end;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    opacity: .8;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.cierre{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3px;
+    width: 5%;
+    cursor: pointer;
+}
+
+.cierre img{
+    width: 100%;
+}
+
+.content-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    text-align: justify;
+}
+
+.titulo-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.titulo-modal h2{
+    font-weight: 700;
+    font-size: 28px;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 40px;
+    width: 90%;
+    gap: 20px;
+}
+
+.container .tab{
+    position: relative;
+    background-color: #2E95B6;
+    padding: 0 20px 20px;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, .2);
+    border-radius: 5px;
+}
+
+.container .tab input{
+    appearance: none;
+}
+
+.container .tab label{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container .tab label:after{
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 32px;
+    color: rgba(255, 255, 255, 0.664);
+    transition: transform 1s;
+}
+
+.container .tab:hover label:after{
+    color: #fff8f8;
+}
+
+.container .tab input:checked ~ label:after{
+    transform: rotate(135deg);
+}
+
+.container .tab label h3{
+    position: relative;
+    font-weight: 600;
+    color: #fff8f8;
+    z-index: 10;
+    font-size: 20px;
+}
+
+.container .tab .content{
+    max-height: 0;
+    transition: 1s;
+    overflow: hidden;
+}
+
+.container .tab input:checked ~ .content{
+    max-height: 100vh;
+    color: #fff8f8;
+}
+
+.container .tab .content p{
+    position: relative;
+    z-index: 10;
+    text-align: justify;
+}
+
+.button-course {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-end;
+    border-radius: 12px;
+    border: 1px #2E95B6 solid;
+    background-color: #2E95B6;
+    color: #fff8f8;
+    font-weight: 600;
+    font-size: 14px;
+    width: 120px;
+    height: 50px;
+    margin: 5px;
+}
+
+.button-course:hover {
+    background-color: #00BFA6;
+    cursor: pointer;
+    border: 0;
+    font-size: 15px;
+    box-shadow: 1px 2px 4px 2px #168f67;
+}

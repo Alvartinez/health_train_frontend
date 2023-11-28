@@ -1,0 +1,58 @@
+<section>
+    <div class="contenedor-modal">
+        <div class="modal-body">
+
+            <a class="cierre" (click)="cierre()">
+                <img src="assets/image/close.png">
+            </a>
+            <div class="content-body">
+                <div class="div-koala">
+                    <img id="koala-curioso" src="assets/image/lindo-koala.png" alt="">
+                </div>
+
+                <div class="container-info">
+
+                    <div class="titulo-modal">
+                        <h2>¿Sabías qué?</h2>
+                    </div>
+                    <div class="retrocede" *ngIf="sabia"> < </div>
+                    <div class="container">
+                            <p>
+                                La FDA promueve prácticas básicas de almacenamiento, como lo son:
+                                <li>
+                                    Refrigere o congele inmediatamente los alimentos perecibles.
+                                </li>
+                            
+                                <li>
+                                    Mantenga sus aparatos a las temperaturas adecuadas. Verifique las instrucciones de almacenamiento en las
+                                    etiquetas
+                                </li>
+                            
+                                <li>
+                                    Consuma los alimentos listos para comer tan pronto como sea posible.
+                                </li>
+                            
+                                <li>
+                                    Esté alerta a los alimentos descompuestos
+                                </li>
+                            
+                                <li>
+                                    Tenga en cuenta que la comida puede enfermarlo gravemente incluso cuando no se ve, huele o sabe mal
+                                </li>
+                            
+                                <li>
+                                    Siga otras prácticas recomendadas de manipulación de alimentos (limpie sus manos, superficies y productos,
+                                    separe los
+                                    alimentos crudos de los alimentos listos para el consumo y cocine a temperaturas seguras), esto reducirá aún más
+                                    su
+                                    riesgo de enfermarse
+                                </li>
+                            
+                            </p>
+                    </div>
+                    <div class="siguiente" *ngIf="sabia"> > </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>

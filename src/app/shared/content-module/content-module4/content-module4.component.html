@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Train</title>
+</head>
+
+<body>
+    <module-navbar [titulo]="titulos[3]"></module-navbar>
+    <content-dropdowns [titular]="titulos[3]"></content-dropdowns>
+    <div class="contenedor-base">
+        <div class="contenedor-titulo">
+            <h6>modulo {{module_selected[3]}}</h6>
+            <h3>{{titulos[3]}}</h3>
+        </div>
+        <div class="cartas">
+            <div class="carta" (click)="texto4()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/utensilio.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[0]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carta" (click)="texto41()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/instalacion_funcionamiento.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[1]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carta" (click)="texto42()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/contaminacion.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[2]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="carta" (click)="texto43()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/inspecion.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[3]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carta" (click)="texto44()">
+                <div class="card-body">
+                    <div class="card-img">
+                        <img src="assets/image/water.png" alt="">
+                    </div>
+                    <div class="card-title">
+                        <p>
+                            {{titulo[4]}}
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+    </div>
+
+</body>
+
+</html>

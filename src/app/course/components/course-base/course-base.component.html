@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Train</title>
+</head>
+<body>
+    
+    <section class="contenedor-curso">
+        <div class="titulo">
+            <div class="div1">
+                <div class="flecha" (click)="home()">&#9668;</div>
+                <h1 (click)="home()">{{curso?.nombre}}</h1>
+
+                <div class="container-proceso">
+                    <div class="progreso">
+                        <div class="barra">
+                            <span *ngIf="inicio" id="inicio">0%</span>
+                            <div class="barra-progreso" [style.width.%]="porcentaje">
+                                <span>{{ porcentaje }}%</span> 
+                            </div>
+                        </div>
+                    </div>
+                    <h5 *ngIf="final">Resultados: {{resultado}}%</h5>
+                    <button (click)="exam()" *ngIf="examen" class="examen">Haz el examen aquí</button>
+                </div>
+            </div>
+
+
+
+        </div>
+        <div class="video-info" *ngIf="mostrarPresentacion">
+            <iframe [src]="presentacionUrl" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture">
+            </iframe>
+          </div>
+          
+        <div class="info">
+            <div class="description">
+                <h2>Descripción</h2>
+                <p>
+                    {{curso?.descripcion}}
+                </p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
