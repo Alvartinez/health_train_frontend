@@ -23,7 +23,10 @@ export class AdminContentComponent {
   course = false;
   report = false;
   deleteUser = false;
-
+  newUser = false;
+  nameUser = "";
+  emailUser = "";
+  eleccion = "";
   Rol: string | undefined;
   Estado: string | undefined;
   Text: string | undefined;
@@ -216,6 +219,23 @@ export class AdminContentComponent {
     this.Rol= "" || undefined;
     this.Estado = "" || undefined;
     this.Text = "" || undefined;
+  }
+
+  new_User(){
+    this.newUser = true;
+  }
+
+  close_NewUser(){
+    this.newUser = false;
+  }
+
+  goodCreate(){
+    if(this.nameUser === "" || this.emailUser === "" || this.eleccion === ""){
+      this.toastr.error("Completar todos los campos ", "Error ");
+      return;
+    }
+    this.toastr.success("Usuario creado exitosamente");
+    this.newUser = false;
   }
 
   dashboard(){

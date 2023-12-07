@@ -19,14 +19,14 @@
             </li>
 
             <li [ngStyle]="course ? isSelect:isNotSelect">
-                <a href="">
+                <a>
                     <img src="../../../../../assets/image/book.png" alt="">
                     <span>Cursos</span>
                 </a>
             </li>
 
             <li [ngStyle]="report ? isSelect:isNotSelect">
-                <a href="">
+                <a>
                     <img src="../../../../../assets/image/reporte.png" alt="">
                     <span>Reportes</span>
                 </a>
@@ -181,7 +181,7 @@
             <div class="new-user">
               <span>Crea un nuevo usuario:</span>
 
-              <button class="Btn-create">
+              <button class="Btn-create" (click)="new_User()">
                 <span>Create</span> 
                 <svg class="svg" viewBox="0 0 512 512">
                   <rect width="96" height="416" x="208" y="48" fill="#FFF"></rect>
@@ -280,4 +280,42 @@
 
     </div>
 
+    <div class="menu_NewUser" *ngIf="!deleteUser && newUser">
+      <div class="newUser-container">
+        <div class="newUser-content">
+          <img src="../../../../../assets/image/newUser_Admin.png" alt="">
+          <div class="content">
+            <h2>Nuevo usuario</h2>
+            <form class="newUser">
+              <div class="user-box">
+                <input type="text" [ngModel]="nameUser" [ngModelOptions]="{standalone: true}" placeholder=" " required name="" id="">
+                <label id="name" >Nombre completo</label>
+              </div>
+
+              <div class="user-box">
+                <input type="email" [ngModel]="emailUser"  [ngModelOptions]="{standalone: true}" placeholder=" " requiredname="" id="">
+                <label id="correo">Email</label>
+              </div>
+
+              <select [(ngModel)]="eleccion" [ngModelOptions]="{standalone: true}" required>
+                <option disabled selected value="">Selecciona un rol</option>
+                <option value="Visitante">Visitante</option>
+                <option value="Aprendiz">Aprendiz</option>
+                <option value="Docente">Docente</option>
+                <option value="Admin">Admin</option>
+              </select>
+            </form>
+
+            <ul class="chips">
+              <li class="chip-yes" (click)="goodCreate()">
+                  Aceptar
+              </li>
+              <li class="chip-no" (click)="close_NewUser()">
+                  Cancelar
+              </li>
+          </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 </section>
